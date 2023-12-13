@@ -1,0 +1,71 @@
+[gin_project] [2023-12-10 09:45:42] [31m[error][0m server/core.InitGorm gorm.go:32 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-10 09:46:06] [31m[error][0m server/core.InitGorm gorm.go:32 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-10 09:46:15] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 09:59:57] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:00:27] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:01:00] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:01:21] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:01:34] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:05:34] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:12:40] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:14:34] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:16:03] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:35:56] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 10:37:43] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 15:00:38] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-10 15:00:58] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:02:07] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:04:59] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:05:13] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:05:45] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:10:02] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:10:12] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:24 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:10:12] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:24 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:18:17] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:18:21] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:24 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:18:21] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:24 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:19:03] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:19:04] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:24 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:19:04] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:24 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:20:29] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:21:46] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:21:46] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:25:11] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:28:08] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:28:33] [32m[info][0m server/api/images_api.ImagesApi.ImageUploadView image_upload.go:57 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-10 19:29:30] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:31:30] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove : The system cannot find the path specified.
+[gin_project] [2023-12-10 19:31:30] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove : The system cannot find the path specified.
+[gin_project] [2023-12-10 19:32:21] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:32:21] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove : The system cannot find the path specified.
+[gin_project] [2023-12-10 19:32:21] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove : The system cannot find the path specified.
+[gin_project] [2023-12-10 19:33:38] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:33:38] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:36:37] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:36:42] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:36:42] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:37:21] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/Snipaste_2023-01-21_14-27-02.png: The system cannot find the file specified.
+[gin_project] [2023-12-10 19:37:21] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/Snipaste_2023-06-27_17-56-30.png: The system cannot find the file specified.
+[gin_project] [2023-12-10 19:38:22] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:38:23] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/Snipaste_2023-01-21_14-27-02.png: The system cannot find the file specified.
+[gin_project] [2023-12-10 19:38:23] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/Snipaste_2023-06-27_17-56-30.png: The system cannot find the file specified.
+[gin_project] [2023-12-10 19:40:25] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:40:46] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/Snipaste_2023-01-21_14-27-02.png: The system cannot find the file specified.
+[gin_project] [2023-12-10 19:40:46] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/Snipaste_2023-06-27_17-56-30.png: The system cannot find the file specified.
+[gin_project] [2023-12-10 19:43:47] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:44:05] [32m[info][0m server/api/images_api.ImagesApi.ImageUploadView image_upload.go:57 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-10 19:45:05] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/uploads/image/1702208645556_JKGi1vEY_2.png: The system cannot find the path specified.
+[gin_project] [2023-12-10 19:45:05] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/uploads/image/1702208645572_LrCUkuhi_0.png: The system cannot find the path specified.
+[gin_project] [2023-12-10 19:46:49] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:46:50] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:46:50] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:26 remove ./uploads/image: The directory is not empty.
+[gin_project] [2023-12-10 19:58:17] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 19:58:19] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/uploads/image/1702208645556_JKGi1vEY_2.png: The system cannot find the path specified.
+[gin_project] [2023-12-10 19:58:19] [31m[error][0m server/models.(*ImageModel).BeforeDelete image_model.go:27 remove uploads/image/uploads/image/1702208645572_LrCUkuhi_0.png: The system cannot find the path specified.
+[gin_project] [2023-12-10 20:00:30] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 20:04:36] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 20:06:16] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 22:28:15] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-10 22:28:21] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-10 22:28:38] [32m[info][0m server/api/images_api.ImagesApi.ImageUploadView image_upload.go:57 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-10 22:29:28] [32m[info][0m server/api/images_api.ImagesApi.ImageUploadView image_upload.go:57 ./uploads/image 目录创建成功 -> ImageUpload

@@ -1,0 +1,5 @@
+[gin_project] [2023-12-06 15:30:42] [32m[info][0m main.main main.go:19 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-06 15:54:58] [32m[info][0m main.main main.go:19 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-06 15:55:59] [32m[info][0m main.main main.go:19 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-06 15:56:10] [32m[info][0m main.main main.go:19 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-06 16:48:37] [32m[info][0m main.main main.go:19 server run addr:0.0.0.0:9190

@@ -1,0 +1,75 @@
+[gin_project] [2023-12-09 10:02:07] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 10:05:17] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 10:06:56] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 10:08:28] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 10:10:31] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 10:14:30] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 10:22:11] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 14:39:09] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:20:55] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:21:21] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:41 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:21:48] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:22:39] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:23:08] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:41 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:28:24] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:28:34] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:41 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:29:35] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:29:39] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:41 filePath 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:35:50] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:35:51] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:43 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:37:47] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:37:50] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:43 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:38:14] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:38:19] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:43 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:40:19] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:40:26] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:43 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 15:42:32] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:54:02] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 15:54:20] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:52 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 16:01:35] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 16:01:37] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:53 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 16:02:24] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 16:02:26] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:53 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 16:48:30] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-09 16:49:19] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-09 17:01:50] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 17:03:05] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:57 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 17:04:21] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 17:11:14] [31m[error][0m server/core.InitGorm gorm.go:32 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog??charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-09 17:11:57] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 17:17:39] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-09 17:26:30] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-09 17:27:16] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 17:27:23] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:57 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 17:29:46] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-09 17:29:49] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 17:29:53] [32m[info][0m server/api/images_api.ImageApi.ImageUploadView image_upload.go:57 ./uploads/image 目录创建成功 -> ImageUpload
+[gin_project] [2023-12-09 19:25:16] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:38:55] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:40:44] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:41:58] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:44:27] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:44:37] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:44:51] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:45:02] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:45:28] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:49:15] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:50:02] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 19:53:13] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 21:44:22] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 21:55:48] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:03:10] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:06:25] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:16:33] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:17:35] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:18:08] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:20:36] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:21:19] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:21:56] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:22:41] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:44:51] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:47:00] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:47:32] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:49:06] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:50:11] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-09 22:50:35] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190

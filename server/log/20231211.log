@@ -1,0 +1,24 @@
+[gin_project] [2023-12-11 09:21:11] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:24:53] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:25:35] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:25:57] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:27:15] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:28:46] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:29:11] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:33:51] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:36:39] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:36:52] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:39:11] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:39:44] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:44:03] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 09:45:56] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 21:37:43] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-11 22:01:39] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:05:07] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:06:19] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:06:43] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:10:00] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:13:33] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:14:39] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:15:10] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-11 22:16:46] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
