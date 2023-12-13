@@ -11,9 +11,10 @@ type JumpTargetRequest struct {
 	JumpTargetName string `json:"jump_target_name" binding:"required" msg:"请输入跳转名称"`
 	JumpTargetURL  string `json:"jump_target_url" binding:"required,url" msg:"非法跳转路径"`
 	Images         string `json:"images" binding:"required" msg:"请输入所示图片"`
+	IsShow         bool   `json:"is_show"`
 }
 
-func (JumpTargetApi) JumpTargetCreate(c *gin.Context) {
+func (JumpTargetApi) JumpTargetCreateView(c *gin.Context) {
 	var JTR JumpTargetRequest
 	err := c.ShouldBindJSON(&JTR)
 	if err != nil {

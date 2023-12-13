@@ -6,6 +6,6 @@
 * text=auto
 
 # 无论在哪个平台上检出这些文件，Git 都会把它们的换行符转换为 CRLF。
-**/*.go text eol=crlf
-**/*.mod text eol=crlf
+*.go text eol=crlf
+*.mod text eol=crlf
 
