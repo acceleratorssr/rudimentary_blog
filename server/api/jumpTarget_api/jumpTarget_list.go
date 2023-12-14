@@ -8,6 +8,15 @@ import (
 	"strings"
 )
 
+// JumpTargetListView 查询跳转的目标
+// @Tags 跳转的目标
+// @Summary  查询跳转目标
+// @Description 查询跳转的目标
+// @Param data query models.Page false "查询参数"
+// @Accept  json
+// @Router /api/jumpTarget [get]
+// @Produce json
+// @Success 200 {object} res.Response
 func (JumpTargetApi) JumpTargetListView(c *gin.Context) {
 	var jt models.Page
 	var jumpTargetList []models.JumpTargetModel

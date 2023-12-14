@@ -2,11 +2,17 @@ package main
 
 import (
 	"server/core"
+	_ "server/docs"
 	"server/flag"
 	"server/global"
 	"server/routers"
 )
 
+// @title server API文档
+// @version 1.0
+// @description server API文档
+// @host 127.0.0.1:9190
+// @BasePath /
 func main() {
 	// 读取配置文件
 	core.UMYaml()

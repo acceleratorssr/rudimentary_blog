@@ -1,0 +1,256 @@
+basePath: /
+definitions:
+  images_api.FileUploadResponse:
+    properties:
+      file_name:
+        type: string
+      msg:
+        type: string
+    type: object
+  jumpTarget_api.JumpTargetRequest:
+    properties:
+      images:
+        type: string
+      is_show:
+        type: boolean
+      jump_target_name:
+        type: string
+      jump_target_url:
+        type: string
+    required:
+    - images
+    - jump_target_name
+    - jump_target_url
+    type: object
+  models.ImageModel:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      key:
+        type: string
+      name:
+        type: string
+      path:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.RemoveRequest:
+    properties:
+      id_list:
+        items:
+          type: integer
+        type: array
+    type: object
+  models.UpdateRequest:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    required:
+    - id
+    - name
+    type: object
+  res.Response:
+    properties:
+      code:
+        type: integer
+      data: {}
+      msg:
+        type: string
+    type: object
+host: 127.0.0.1:9190
+info:
+  contact: {}
+  description: server API文档
+  title: server API文档
+  version: "1.0"
+paths:
+  /api/images:
+    delete:
+      consumes:
+      - application/json
+      description: 例如：image
+      parameters:
+      - description: 需要删除的id_list
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.RemoveRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 删除对应的文件
+      tags:
+      - 图片
+    get:
+      consumes:
+      - application/json
+      description: 根据分页参数获取图片列表
+      parameters:
+      - description: 页码
+        in: query
+        name: page
+        required: true
+        type: integer
+      - description: 每页数量
+        in: query
+        name: limit
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.ImageModel'
+            type: array
+      summary: 获取图片列表
+      tags:
+      - 图片
+    put:
+      consumes:
+      - application/json
+      description: 例如：image
+      parameters:
+      - description: 需要更新的id以及对应新的名称
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 更新对应的文件名
+      tags:
+      - 图片
+  /api/jumpTarget:
+    delete:
+      consumes:
+      - application/json
+      description: 删除跳转的目标
+      parameters:
+      - description: 需要删除的id_list
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.RemoveRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 删除跳转目标
+      tags:
+      - 跳转的目标
+    get:
+      consumes:
+      - application/json
+      description: 查询跳转的目标
+      parameters:
+      - in: query
+        name: key
+        type: integer
+      - in: query
+        name: limit
+        type: integer
+      - in: query
+        name: page
+        type: integer
+      - in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 查询跳转目标
+      tags:
+      - 跳转的目标
+    post:
+      consumes:
+      - application/json
+      description: 添加跳转的目标
+      parameters:
+      - description: 表示多个参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/jumpTarget_api.JumpTargetRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 添加跳转目标
+      tags:
+      - 跳转的目标
+    put:
+      consumes:
+      - application/json
+      description: 更新跳转的目标
+      parameters:
+      - description: 需要更新的字段
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/jumpTarget_api.JumpTargetRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 更新跳转目标
+      tags:
+      - 跳转的目标
+  /image/upload:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 上传图片到服务器，并在数据库中保存图片信息
+      parameters:
+      - description: 图片文件
+        in: formData
+        name: image
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/images_api.FileUploadResponse'
+            type: array
+      summary: 上传图片
+      tags:
+      - 图片
+swagger: "2.0"

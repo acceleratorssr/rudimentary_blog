@@ -7,6 +7,16 @@ import (
 	"server/service/common"
 )
 
+// ImageListView
+// @Summary 获取图片列表
+// @Description 根据分页参数获取图片列表
+// @Tags 图片
+// @Accept json
+// @Produce json
+// @Param page query int true "页码"
+// @Param limit query int true "每页数量"
+// @Success 200 {array} models.ImageModel
+// @Router /api/images [get]
 func (ImagesApi) ImageListView(c *gin.Context) {
 	// 请求方法：
 	// http://127.0.0.1:9190/api/images?page=1&limit=2

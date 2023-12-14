@@ -14,24 +14,33 @@ type JumpTargetRequest struct {
 	IsShow         bool   `json:"is_show"`
 }
 
+// JumpTargetCreateView 添加跳转的目标
+// @Tags 跳转的目标
+// @Summary  添加跳转目标
+// @Description 添加跳转的目标
+// @Param data body JumpTargetRequest true "表示多个参数"
+// @Accept  json
+// @Router /api/jumpTarget [post]
+// @Produce json
+// @Success 200 {object} res.Response{}
 func (JumpTargetApi) JumpTargetCreateView(c *gin.Context) {
-	var JTR JumpTargetRequest
-	err := c.ShouldBindJSON(&JTR)
+	var jtr JumpTargetRequest
+	err := c.ShouldBindJSON(&jtr)
 	if err != nil {
-		res.FailWithError(err, JTR, c)
+		res.FailWithError(err, jtr, c)
 		return
 	}
 
 	var jt models.JumpTargetModel
-	err = global.DB.Take(&jt, "jump_target_name = ?", JTR.JumpTargetName).Error
+	err = global.DB.Take(&jt, "jump_target_name = ?", jtr.JumpTargetName).Error
 	if err == nil {
 		res.FailWithMessage("跳转名称已存在", c)
 		return
 	}
 	err = global.DB.Create(&models.JumpTargetModel{
-		JumpTargetName: JTR.JumpTargetName,
-		JumpTargetURL:  JTR.JumpTargetURL,
-		Images:         JTR.Images,
+		JumpTargetName: jtr.JumpTargetName,
+		JumpTargetURL:  jtr.JumpTargetURL,
+		Images:         jtr.Images,
 	}).Error
 	if err != nil {
 		global.Log.Error(err)

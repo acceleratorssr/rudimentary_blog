@@ -5,3 +5,9 @@
 [gin_project] [2023-12-13 16:48:20] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
 [gin_project] [2023-12-13 16:48:56] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
 [gin_project] [2023-12-13 16:49:23] [32m[info][0m main.main main.go:27 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-13 20:43:40] [32m[info][0m main.main main.go:32 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-13 20:44:55] [32m[info][0m main.main main.go:32 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-13 22:48:18] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-13 22:48:26] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-13 22:48:37] [32m[info][0m main.main main.go:32 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-13 22:49:48] [32m[info][0m main.main main.go:32 server run addr:0.0.0.0:9190

@@ -8,6 +8,15 @@ import (
 	"server/models/res"
 )
 
+// ImageUpdateView 更新文件名
+// @Tags 图片
+// @Summary  更新对应的文件名
+// @Description 例如：image
+// @Param data body models.UpdateRequest true "需要更新的id以及对应新的名称"
+// @Accept  json
+// @Router /api/images [put]
+// @Produce json
+// @Success 200 {object} res.Response
 func (ImagesApi) ImageUpdateView(c *gin.Context) {
 	var UR models.UpdateRequest
 	// UR设置了binding:"required"和对应报错msg

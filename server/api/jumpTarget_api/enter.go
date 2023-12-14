@@ -1,6 +1,8 @@
 package jumpTarget_api
 
-import "server/models"
+import (
+	"server/models"
+)
 
 type JumpTargetApi struct {
 	models.MODEL
