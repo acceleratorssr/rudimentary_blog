@@ -121,6 +121,29 @@ const docTemplate = `{
                 }
             }
         },
+        "/api/imagesName": {
+            "get": {
+                "description": "返回所有图片名字",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "图片"
+                ],
+                "summary": "获取图片名字列表",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/images_api.NameList"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/api/jumpTarget": {
             "get": {
                 "description": "查询跳转的目标",
@@ -306,6 +329,20 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "images_api.NameList": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "path": {
                     "type": "string"
                 }
             }

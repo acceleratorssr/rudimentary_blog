@@ -7,6 +7,15 @@ definitions:
       msg:
         type: string
     type: object
+  images_api.NameList:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      path:
+        type: string
+    type: object
   jumpTarget_api.JumpTargetRequest:
     properties:
       images:
@@ -137,6 +146,21 @@ paths:
           schema:
             $ref: '#/definitions/res.Response'
       summary: 更新对应的文件名
+      tags:
+      - 图片
+  /api/imagesName:
+    get:
+      description: 返回所有图片名字
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/images_api.NameList'
+            type: array
+      summary: 获取图片名字列表
       tags:
       - 图片
   /api/jumpTarget:
