@@ -33,8 +33,14 @@ func (MenuApi) MenuCreateView(c *gin.Context) {
 		return
 	}
 
+	var menu models.MenuModel
+	err = global.DB.Select("menu_title").Take(&menu, "menu_title = ? or path = ?", MR.MenuTitle, MR.Path).Error
+	if err == nil {
+		res.FailWithMessage("菜单名称已存在", c)
+		return
+	}
 	// 创建菜单
-	menu := models.MenuModel{
+	menu = models.MenuModel{
 		MenuTitle:   MR.MenuTitle,
 		MenuTitleEn: MR.MenuTitleEn,
 		Path:        MR.Path,

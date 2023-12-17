@@ -19,3 +19,6 @@
 [gin_project] [2023-12-17 16:48:00] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
 [gin_project] [2023-12-17 16:50:13] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
 [gin_project] [2023-12-17 16:53:09] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-17 19:02:35] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-17 19:03:08] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-17 19:14:30] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190

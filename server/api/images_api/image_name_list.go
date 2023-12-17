@@ -7,7 +7,7 @@ import (
 	"server/models/res"
 )
 
-type NameList struct {
+type NameListResponse struct {
 	ID   uint   `json:"id"`
 	Name string `json:"name"`
 	Path string `json:"path"`
@@ -21,7 +21,7 @@ type NameList struct {
 // @Success 200 {array} NameList
 // @Router /api/imagesName [get]
 func (ImagesApi) ImageNameListView(c *gin.Context) {
-	var imageNameList []NameList
+	var imageNameList []NameListResponse
 
 	err := global.DB.Model(models.ImageModel{}).Select("id", "name", "path").Find(&imageNameList).Error
 	if err != nil {
