@@ -17,7 +17,7 @@ func ComList[T any](model T, page models.Page, list *[]T, c *gin.Context) (total
 
 	//DB := global.DB
 	//var totalCount int64
-	//global.DB.Model(&models.ImageModel{}).Count(&totalCount)
+	//global.DB.Model(&models.ImageModels{}).Count(&totalCount)
 	//等效：
 	// 可加select优化查询速度
 	// Where(model)只能筛选true

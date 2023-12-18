@@ -4,7 +4,7 @@ import (
 	"server/models/status_type"
 )
 
-type ArticleModel struct {
+type ArticleModels struct {
 	MODEL
 	Title string `gorm:"size:32;not null" json:"title"`
 	// utf-8：一个中文字符占用3个字节
@@ -12,8 +12,8 @@ type ArticleModel struct {
 	Content  string `gorm:"type=varchar(30000)" json:"content"`
 	AuthorID uint   `json:"author_id"`
 	// 这里设置外键为AuthorID
-	Author   UserModel `gorm:"foreignKey:AuthorID" json:"author"`
-	Category string    `gorm:"size:32:" json:"category"`
+	Author   UserModels `gorm:"foreignKey:AuthorID" json:"author"`
+	Category string     `gorm:"size:32:" json:"category"`
 
 	PageView   int `gorm:"default:0" json:"page_view"`
 	Like       int `gorm:"default:0" json:"like"`
@@ -25,12 +25,12 @@ type ArticleModel struct {
 	IsHot       bool `gorm:"default:false" json:"is_hot"`
 	IsRecommend bool `gorm:"default:false" json:"is_recommend"`
 
-	CommentModels []CommentModel `gorm:"foreignKey:PostID" json:"-"`
-	TagsModel     []TagsModel    `gorm:"many2many:article_tag" json:"tags_model"`
+	CommentModels []CommentModels `gorm:"foreignKey:PostID" json:"-"`
+	TagsModel     []TagsModels    `gorm:"many2many:article_tag" json:"tags_model"`
 
 	Tags status_type.Array `gorm:"type:string;size:64" json:"tag"`
 
 	// ArticleID uint   `json:"article_id"`
-	//Photo   []ImageModel `gorm:"foreignKey:ArticleID" json:"-"`
+	//Photo   []ImageModels `gorm:"foreignKey:ArticleID" json:"-"`
 	PhotoID uint `json:"PhotoID"`
 }

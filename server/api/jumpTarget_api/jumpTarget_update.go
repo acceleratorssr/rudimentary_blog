@@ -26,7 +26,7 @@ func (JumpTargetApi) JumpTargetUpdateView(c *gin.Context) {
 	}
 
 	id := c.Param("id")
-	var jt models.JumpTargetModel
+	var jt models.JumpTargetModels
 	err = global.DB.Take(&jt, id).Error
 	if err != nil {
 		res.FailWithMessage("跳转名称不存在", c)

@@ -19,7 +19,7 @@ import (
 // @Success 200 {object} res.Response
 func (JumpTargetApi) JumpTargetListView(c *gin.Context) {
 	var jt models.Page
-	var jumpTargetList []models.JumpTargetModel
+	var jumpTargetList []models.JumpTargetModels
 	err := c.ShouldBindQuery(&jt)
 	if err != nil {
 		res.FailWithCode(res.ParamsError, c)
@@ -34,8 +34,8 @@ func (JumpTargetApi) JumpTargetListView(c *gin.Context) {
 	}
 	// true对应1
 	// 可以利用表内字段做筛查
-	// 注意：gorm特性：JumpTargetModel{IsShow: false}会被忽略，只能用true筛选
-	totalPages, flag := common.ComList(models.JumpTargetModel{IsShow: isShow}, jt, &jumpTargetList, c)
+	// 注意：gorm特性：JumpTargetModels{IsShow: false}会被忽略，只能用true筛选
+	totalPages, flag := common.ComList(models.JumpTargetModels{IsShow: isShow}, jt, &jumpTargetList, c)
 	if flag {
 		res.OKWithList(jumpTargetList, totalPages, c)
 	}

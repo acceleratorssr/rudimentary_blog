@@ -33,14 +33,14 @@ func (MenuApi) MenuCreateView(c *gin.Context) {
 		return
 	}
 
-	var menu models.MenuModel
+	var menu models.MenuModels
 	err = global.DB.Select("menu_title").Take(&menu, "menu_title = ? or path = ?", MR.MenuTitle, MR.Path).Error
 	if err == nil {
 		res.FailWithMessage("菜单名称已存在", c)
 		return
 	}
 	// 创建菜单
-	menu = models.MenuModel{
+	menu = models.MenuModels{
 		MenuTitle:   MR.MenuTitle,
 		MenuTitleEn: MR.MenuTitleEn,
 		Path:        MR.Path,
@@ -63,13 +63,13 @@ func (MenuApi) MenuCreateView(c *gin.Context) {
 	}
 
 	// 添加到关联表
-	var menuImage []models.MenuImage
+	var menuImage []models.MenuImages
 	// 不要这样写，:= 是用于声明并初始化变量的短变量声明语句
-	//menuImage := []models.MenuImage
+	//menuImage := []models.MenuImages
 
 	for _, v := range MR.ImageSort {
 		// 需要判断imageId是否存在
-		menuImage = append(menuImage, models.MenuImage{
+		menuImage = append(menuImage, models.MenuImages{
 			MenuID:  menu.ID,
 			ImageID: v.ImageID,
 			Sort:    v.Sort,

@@ -1,0 +1,51 @@
+[gin_project] [2023-12-18 17:18:03] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:19:54] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:21:17] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:22:36] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:23:14] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:23:38] [31m[error][0m server/api/menu_api.MenuApi.MenuUpdateView menu_update.go:67 Error 1054 (42S22): Unknown column 'FieldBanList' in 'field list'
+[gin_project] [2023-12-18 17:24:08] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:26:58] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:28:00] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:28:34] [31m[error][0m server/api/menu_api.MenuApi.MenuUpdateView menu_update.go:68 Error 1054 (42S22): Unknown column 'field_ban_list' in 'field list'
+[gin_project] [2023-12-18 17:31:13] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 17:33:15] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:07:46] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:11:35] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:13:43] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:24:33] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:25:03] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:52:14] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:53:14] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-18 18:53:17] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 18:59:21] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2023-12-18 19:00:16] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success
+[gin_project] [2023-12-18 19:03:57] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success
+[gin_project] [2023-12-18 19:06:57] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success
+[gin_project] [2023-12-18 19:07:14] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:07:22] [31m[error][0m server/api/menu_api.MenuApi.MenuCreateView menu_create.go:81 菜单图片关联失败Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`blog`.`menu_images`, CONSTRAINT `fk_menu_images_image_model` FOREIGN KEY (`image_id`) REFERENCES `image_models` (`id`))
+[gin_project] [2023-12-18 19:10:47] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:16:40] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:20:38] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:20:40] [31m[error][0m server/api/menu_api.MenuApi.MenuUpdateView menu_update.go:83 empty slice found
+[gin_project] [2023-12-18 19:22:11] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:22:12] [31m[error][0m server/api/menu_api.MenuApi.MenuUpdateView menu_update.go:84 empty slice found
+[gin_project] [2023-12-18 19:22:45] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:22:46] [31m[error][0m server/api/menu_api.MenuApi.MenuUpdateView menu_update.go:84 empty slice found
+[gin_project] [2023-12-18 19:23:12] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:23:13] [31m[error][0m server/api/menu_api.MenuApi.MenuUpdateView menu_update.go:87 empty slice found
+[gin_project] [2023-12-18 19:23:24] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:25:31] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:29:37] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:44:26] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:45:28] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:46:06] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 19:54:44] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:00:54] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:03:22] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:03:57] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:04:48] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:05:31] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:05:34] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:06:43] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-18 20:09:37] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190

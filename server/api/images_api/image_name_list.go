@@ -23,7 +23,7 @@ type NameListResponse struct {
 func (ImagesApi) ImageNameListView(c *gin.Context) {
 	var imageNameList []NameListResponse
 
-	err := global.DB.Model(models.ImageModel{}).Select("id", "name", "path").Find(&imageNameList).Error
+	err := global.DB.Model(models.ImageModels{}).Select("id", "name", "path").Find(&imageNameList).Error
 	if err != nil {
 		res.FailWithError(err, imageNameList, c)
 	}

@@ -1,16 +1,16 @@
 package models
 
-type CommentModel struct {
+type CommentModels struct {
 	MODEL
 	//ID              uint         `json:"id"`
-	AuthorID        uint         `json:"author_id"`
-	PostID          uint         `json:"post_id"`
-	ParentCommentID uint         `json:"parent_id"`
-	Post            ArticleModel `gorm:"foreignKey:PostID" json:"-"`
-	Author          UserModel    `gorm:"foreignKey:AuthorID" json:"Author"`
+	AuthorID        uint          `json:"author_id"`
+	PostID          uint          `json:"post_id"`
+	ParentCommentID uint          `json:"parent_id"`
+	Post            ArticleModels `gorm:"foreignKey:PostID" json:"-"`
+	Author          UserModels    `gorm:"foreignKey:AuthorID" json:"Author"`
 
-	SubComments        []*CommentModel `gorm:"foreignKey:ParentCommentID" json:"sub_comments"`
-	ParentCommentModel *CommentModel   `gorm:"foreignKey:ParentCommentID" json:"parent_comment_model"`
+	SubComments        []*CommentModels `gorm:"foreignKey:ParentCommentID" json:"sub_comments"`
+	ParentCommentModel *CommentModels   `gorm:"foreignKey:ParentCommentID" json:"parent_comment_model"`
 
 	Text string `json:"text"`
 
@@ -19,6 +19,6 @@ type CommentModel struct {
 }
 
 // GetID returns model ID
-func (c *CommentModel) GetID() uint {
+func (c *CommentModels) GetID() uint {
 	return c.ID
 }

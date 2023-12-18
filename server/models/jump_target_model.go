@@ -1,6 +1,6 @@
 package models
 
-type JumpTargetModel struct {
+type JumpTargetModels struct {
 	MODEL
 	JumpTargetName string `json:"jump_target_name"`
 	JumpTargetURL  string `json:"jump_target_url"`

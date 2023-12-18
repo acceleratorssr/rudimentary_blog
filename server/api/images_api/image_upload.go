@@ -101,7 +101,7 @@ func (ImagesApi) ImageUploadView(c *gin.Context) {
 		fmt.Println(imageHash)
 
 		// 在数据库中查看图片是否存在
-		var imageModel models.ImageModel
+		var imageModel models.ImageModels
 		if err = global.DB.Take(&imageModel, "`key` = ?", imageHash).Error; err == nil {
 			// 找到了匹配的记录
 			resList = append(resList, FileUploadResponse{
@@ -132,7 +132,7 @@ func (ImagesApi) ImageUploadView(c *gin.Context) {
 			FileName: file.Filename,
 			Msg:      "上传成功",
 		})
-		global.DB.Create(&models.ImageModel{
+		global.DB.Create(&models.ImageModels{
 			MODEL: models.MODEL{},
 			Path:  path.Join(filePath, fileName),
 			Key:   imageHash,

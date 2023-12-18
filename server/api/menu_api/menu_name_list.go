@@ -16,7 +16,7 @@ type NameListResponse struct {
 func (MenuApi) MenuNameListView(c *gin.Context) {
 	var menuNameList []NameListResponse
 
-	err := global.DB.Model(models.MenuModel{}).Select("id", "menu_title", "path").Find(&menuNameList).Error
+	err := global.DB.Model(models.MenuModels{}).Select("id", "menu_title", "path").Find(&menuNameList).Error
 	if err != nil {
 		res.FailWithError(err, menuNameList, c)
 	}

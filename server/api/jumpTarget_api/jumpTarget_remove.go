@@ -25,7 +25,7 @@ func (JumpTargetApi) JumpTargetRemoveView(c *gin.Context) {
 		return
 	}
 
-	var jumpTargetList []models.JumpTargetModel
+	var jumpTargetList []models.JumpTargetModels
 	count := global.DB.Find(&jumpTargetList, RQ.IDList).RowsAffected
 	if count == 0 {
 		res.FailWithMessage("对应链接不存在", c)

@@ -31,13 +31,13 @@ func (JumpTargetApi) JumpTargetCreateView(c *gin.Context) {
 		return
 	}
 
-	var jt models.JumpTargetModel
+	var jt models.JumpTargetModels
 	err = global.DB.Take(&jt, "jump_target_name = ?", jtr.JumpTargetName).Error
 	if err == nil {
 		res.FailWithMessage("跳转名称已存在", c)
 		return
 	}
-	err = global.DB.Create(&models.JumpTargetModel{
+	err = global.DB.Create(&models.JumpTargetModels{
 		JumpTargetName: jtr.JumpTargetName,
 		JumpTargetURL:  jtr.JumpTargetURL,
 		Images:         jtr.Images,

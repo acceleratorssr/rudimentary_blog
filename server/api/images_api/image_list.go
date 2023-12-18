@@ -15,12 +15,12 @@ import (
 // @Produce json
 // @Param page query int true "页码"
 // @Param limit query int true "每页数量"
-// @Success 200 {array} models.ImageModel
+// @Success 200 {array} models.ImageModels
 // @Router /api/images [get]
 func (ImagesApi) ImageListView(c *gin.Context) {
 	// 请求方法：
 	// http://127.0.0.1:9190/api/images?page=1&limit=2
-	var imageList []models.ImageModel
+	var imageList []models.ImageModels
 	var p models.Page
 	// 绑定查询参数到结构体
 	err := c.ShouldBindQuery(&p)
@@ -30,7 +30,7 @@ func (ImagesApi) ImageListView(c *gin.Context) {
 	}
 
 	// 传models时不需要传&，传imageList要加&，这样内部变化才影响外部
-	totalPages, flag := common.ComList(models.ImageModel{}, p, &imageList, c)
+	totalPages, flag := common.ComList(models.ImageModels{}, p, &imageList, c)
 
 	if flag {
 		res.OKWithList(imageList, totalPages, c)

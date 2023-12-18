@@ -4,7 +4,7 @@ import (
 	"server/models/status_type"
 )
 
-type UserModel struct {
+type UserModels struct {
 	MODEL
 	NickName string `gorm:"size=32" json:"nick_name"`
 	Username string `gorm:"size:32;not null" json:"user_name"`
@@ -18,7 +18,7 @@ type UserModel struct {
 	Permission status_type.Permission `gorm:"size:4;not null;default:1" json:"permission"`
 
 	SignStatus    status_type.SignStatus `gorm:"type=smallint(6);not null" json:"sign_status"`
-	ArticleModels []ArticleModel         `gorm:"foreignKey:AuthorID" json:"-"`
+	ArticleModels []ArticleModels        `gorm:"foreignKey:AuthorID" json:"-"`
 	// joinForeignKey:UserID;JoinReferences:ArticleID这里名字要和连接表对应相同
-	CollectsModels []ArticleModel `gorm:"many2many:user_collection;joinForeignKey:UserID;JoinReferences:ArticleID" json:"-"`
+	CollectsModels []ArticleModels `gorm:"many2many:user_collection;joinForeignKey:UserID;JoinReferences:ArticleID" json:"-"`
 }
