@@ -5,7 +5,7 @@ import "encoding/json"
 type Permission int
 
 const (
-	PermissionAdmin Permission = iota
+	PermissionAdmin Permission = 1 + iota
 	PermissionUser
 	PermissionNormal
 	PermissionBanned

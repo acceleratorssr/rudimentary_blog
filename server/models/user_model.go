@@ -6,15 +6,15 @@ import (
 
 type UserModels struct {
 	MODEL
-	NickName string `gorm:"size=32" json:"nick_name"`
 	Username string `gorm:"size:32;not null" json:"user_name"`
+	NickName string `gorm:"size=32" json:"nick_name"`
 	Password string `gorm:"size:64;not null" json:"password"`
+	// 可加默认头像
 	Avatar   string `gorm:"size:256" json:"-"`
 	Token    string `gorm:"64" json:"token"`
 	IP       string `gorm:"size:20" json:"ip"`
-
-	// 犯过一个小错误，设置位数最大为4位，但是赋值10001，肯定报错：
-	// Error 1067 (42000): Invalid default value for 'permission'
+	PhoneNum string `gorm:"size:11" json:"phone_num"`
+	// admin:1 user:2 normal:3 banned:4
 	Permission status_type.Permission `gorm:"size:4;not null;default:1" json:"permission"`
 
 	SignStatus    status_type.SignStatus `gorm:"type=smallint(6);not null" json:"sign_status"`

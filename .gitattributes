@@ -5,9 +5,8 @@
 # 在检出时，Git 会把所有文件的换行符转换为平台默认的换行符（在 Windows 上是 CRLF，即 \r\n；在 Unix 或 Linux 上是 LF）。
 * text=auto
 
-# 无论在哪个平台上检出这些文件，Git 都会把它们的换行符转换为 CRLF。
-*.go text eol=crlf
-*.mod text eol=crlf
-*.log text eol=crlf
-*.yaml text eol=crlf
+*.go text
+*.mod text
+*.log text
+*.yaml text
 
