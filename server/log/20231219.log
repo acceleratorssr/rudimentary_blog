@@ -1,0 +1,41 @@
+[gin_project] [2023-12-19 10:27:48] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-19 10:30:31] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-19 10:38:10] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-19 10:38:20] [31m[error][0m server/flag.CreateUser create_user.go:28 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:40:05] [31m[error][0m server/flag.CreateUser create_user.go:30 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:42:54] [31m[error][0m server/flag.CreateUser create_user.go:29 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:44:24] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-19 10:44:32] [31m[error][0m server/flag.CreateUser create_user.go:31 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:45:21] [31m[error][0m server/flag.CreateUser create_user.go:31 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:45:59] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-19 10:46:07] [31m[error][0m server/flag.CreateUser create_user.go:31 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:46:15] [31m[error][0m server/flag.CreateUser create_user.go:31 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:46:28] [31m[error][0m server/flag.CreateUser create_user.go:30 输入昵称错误:unexpected newline
+[gin_project] [2023-12-19 10:48:04] [31m[error][0m server/flag.CreateUser create_user.go:37 输入密码错误:unexpected newline
+[gin_project] [2023-12-19 10:49:34] [31m[error][0m server/flag.CreateUser create_user.go:21 输入用户名错误:unexpected newline
+[gin_project] [2023-12-19 10:53:34] [31m[error][0m server/flag.CreateUser create_user.go:51 密码与上次输入不匹配:unexpected newline
+[gin_project] [2023-12-19 10:54:11] [31m[error][0m server/flag.CreateUser create_user.go:51 头像错误:unexpected newline
+[gin_project] [2023-12-19 11:01:30] [31m[error][0m server/flag.CreateUser create_user.go:27 输入用户名错误:unexpected newline
+[gin_project] [2023-12-19 11:01:34] [31m[error][0m server/flag.CreateUser create_user.go:47 输入密码错误:unexpected newline
+[gin_project] [2023-12-19 11:02:44] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-19 11:02:57] [31m[error][0m server/flag.CreateUser create_user.go:60 与上次输入密码不一致:<nil>
+[gin_project] [2023-12-19 11:02:58] [31m[error][0m server/flag.CreateUser create_user.go:60 与上次输入密码不一致:<nil>
+[gin_project] [2023-12-19 15:16:37] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-19 15:16:51] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-19 15:17:52] [33m[warning][0m server/flag.CreateUser create_user.go:38 用户名已存在:Error 1054 (42S22): Unknown column 'user_name' in 'where clause'
+[gin_project] [2023-12-19 15:18:49] [33m[warning][0m server/flag.CreateUser create_user.go:38 用户名已存在:Error 1054 (42S22): Unknown column 'user_name' in 'where clause'
+[gin_project] [2023-12-19 15:20:10] [33m[warning][0m server/flag.CreateUser create_user.go:38 用户名已存在:record not found
+[gin_project] [2023-12-19 15:23:56] [31m[error][0m server/flag.CreateUser create_user.go:80 regexp.MatchString:error parsing regexp: invalid or unsupported Perl syntax: `(?=`
+[gin_project] [2023-12-19 15:24:44] [31m[error][0m server/flag.CreateUser create_user.go:80 regexp.MatchString:error parsing regexp: invalid or unsupported Perl syntax: `(?=`
+[gin_project] [2023-12-19 15:25:25] [31m[error][0m server/flag.CreateUser create_user.go:80 regexp.MatchString:error parsing regexp: invalid or unsupported Perl syntax: `(?=`
+[gin_project] [2023-12-19 15:26:48] [32m[info][0m server/flag.CreateUser create_user.go:69 退出创建用户
+[gin_project] [2023-12-19 15:28:10] [33m[warning][0m server/flag.CreateUser create_user.go:76 密码长度不应低于六位:<nil>
+[gin_project] [2023-12-19 15:28:14] [33m[warning][0m server/flag.CreateUser create_user.go:102 与上次输入密码不一致:<nil>
+[gin_project] [2023-12-19 15:29:24] [33m[warning][0m server/flag.CreateUser create_user.go:76 密码长度不应低于六位:
+[gin_project] [2023-12-19 15:29:42] [33m[warning][0m server/flag.CreateUser create_user.go:76 密码长度不应低于六位:
+[gin_project] [2023-12-19 15:29:51] [33m[warning][0m server/flag.CreateUser create_user.go:106 与上次输入密码不一致:<nil>
+[gin_project] [2023-12-19 15:29:59] [33m[warning][0m server/flag.CreateUser create_user.go:102 密码不可为空:unexpected newline
+[gin_project] [2023-12-19 15:30:12] [32m[info][0m server/flag.CreateUser create_user.go:122 退出创建用户
+[gin_project] [2023-12-19 15:45:19] [31m[error][0m server/flag.CreateUser create_user.go:143 手机号码位数异常
+[gin_project] [2023-12-19 15:45:54] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success
+[gin_project] [2023-12-19 22:11:14] [31m[error][0m server/utils/jwts.ParseToken enter.go:45 token parse err: token has invalid claims: token is expired
