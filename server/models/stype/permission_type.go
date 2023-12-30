@@ -1,7 +1,8 @@
-package status_type
+package stype
 
 import "encoding/json"
 
+// Permission 管理员1，用户2，普通3，禁止4
 type Permission int
 
 const (

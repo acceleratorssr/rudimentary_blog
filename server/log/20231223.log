@@ -1,0 +1,8 @@
+[gin_project] [2023-12-23 11:56:24] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-23 11:57:10] [33m[warning][0m server/utils/pwd.CheckPasswords pwd.go:26 密码错误
+[gin_project] [2023-12-23 11:57:10] [33m[warning][0m server/api/user_api.UserApi.UserChangePasswordView user_change_password.go:71 UserSelfUpdateView -> 密码错误
+[gin_project] [2023-12-23 11:57:36] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuthAdmin.func2 jwt_auth.go:54 UserListView -> 用户权限不足
+[gin_project] [2023-12-23 12:00:35] [33m[warning][0m server/api/user_api.UserApi.UserChangePasswordView user_change_password.go:56 UserChangePasswordView -> 修改失败:Error 1054 (42S22): Unknown column 'NewPassword' in 'field list'
+[gin_project] [2023-12-23 12:00:57] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-23 12:01:04] [33m[warning][0m server/utils/pwd.CheckPasswords pwd.go:26 密码错误
+[gin_project] [2023-12-23 12:01:04] [33m[warning][0m server/api/user_api.UserApi.UserChangePasswordView user_change_password.go:51 UserSelfUpdateView -> 密码错误

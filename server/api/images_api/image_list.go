@@ -29,8 +29,9 @@ func (ImagesApi) ImageListView(c *gin.Context) {
 		return
 	}
 
+	choose := "ID|CreatedAt|UpdatedAt|Path|Key|Name"
 	// 传models时不需要传&，传imageList要加&，这样内部变化才影响外部
-	totalPages, flag := common.ComList(models.ImageModels{}, p, &imageList, c)
+	totalPages, flag := common.ComList(models.ImageModels{}, p, &imageList, choose, c)
 
 	if flag {
 		res.OKWithList(imageList, totalPages, c)

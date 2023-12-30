@@ -20,6 +20,7 @@ func main() {
 	global.Log = core.InitLogger()
 	// 初始化数据库
 	global.DB = core.Gorm()
+	global.Redis = core.Redis()
 
 	// 命令行参数绑定
 	option := flag.Parse()

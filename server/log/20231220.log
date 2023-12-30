@@ -1,0 +1,35 @@
+[gin_project] [2023-12-20 15:25:07] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 15:25:21] [33m[warning][0m server/utils/pwd.CheckPasswords pwd.go:26 密码错误
+[gin_project] [2023-12-20 15:25:21] [33m[warning][0m server/api/user_api.UserApi.UsernameLogin username_login.go:38 登录 -> 密码错误<nil>
+[gin_project] [2023-12-20 15:39:52] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 15:41:29] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:30:24] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:32:04] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:36:08] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:38:02] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:38:42] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:39:15] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:40:00] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:40:47] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:41:19] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:41:37] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:44:49] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:47:56] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:48:31] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 16:49:14] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 19:49:18] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2023-12-20 19:49:34] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 19:49:42] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2023-12-20 19:49:42] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuth.func1 jwt_auth.go:21 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2023-12-20 19:51:56] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 19:56:05] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 19:58:06] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 19:58:59] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 20:04:26] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 20:04:29] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuth.func1 jwt_auth.go:14 UserListView -> token为空
+[gin_project] [2023-12-20 20:04:29] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2023-12-20 20:04:29] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuth.func1 jwt_auth.go:21 UserListView -> token解析失败token is malformed: token contains an invalid number of segments
+[gin_project] [2023-12-20 20:05:00] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 20:05:01] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuth.func1 jwt_auth.go:14 UserListView -> token为空
+[gin_project] [2023-12-20 20:28:45] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-20 20:41:03] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190

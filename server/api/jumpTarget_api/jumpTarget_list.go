@@ -32,10 +32,13 @@ func (JumpTargetApi) JumpTargetListView(c *gin.Context) {
 	if strings.Contains(referer, "admin") {
 		isShow = false
 	}
+
+	choose := "ID|CreatedAt|UpdatedAt|JumpTargetName|JumpTargetURL|Images|IsShow"
+
 	// true对应1
 	// 可以利用表内字段做筛查
 	// 注意：gorm特性：JumpTargetModels{IsShow: false}会被忽略，只能用true筛选
-	totalPages, flag := common.ComList(models.JumpTargetModels{IsShow: isShow}, jt, &jumpTargetList, c)
+	totalPages, flag := common.ComList(models.JumpTargetModels{IsShow: isShow}, jt, &jumpTargetList, choose, c)
 	if flag {
 		res.OKWithList(jumpTargetList, totalPages, c)
 	}

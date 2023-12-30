@@ -1,4 +1,4 @@
-package status_type
+package stype
 
 import (
 	"database/sql/driver"

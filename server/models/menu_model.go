@@ -1,6 +1,6 @@
 package models
 
-import "server/models/status_type"
+import "server/models/stype"
 
 type MenuModels struct {
 	MODEL
@@ -11,7 +11,7 @@ type MenuModels struct {
 	MenuImages  []ImageModels `gorm:"many2many:menu_images;joinForeignKey:MenuID;JoinReferences:ImageID" json:"menu_images"`
 	// 菜单图片的切换间隔时间
 	MenuTime int `json:"menu_time"`
-	Abstract status_type.Array
+	Abstract stype.Array
 	ParentId int `gorm:"size:11" json:"parent_id"`
 	Sort     int `gorm:"size:11" json:"sort"`
 }

@@ -1,0 +1,5 @@
+[gin_project] [2023-12-21 11:16:10] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-21 11:16:14] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2023-12-21 11:16:14] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuth.func2 jwt_auth.go:23 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2023-12-21 11:18:48] [32m[info][0m main.main main.go:33 server run addr:0.0.0.0:9190
+[gin_project] [2023-12-21 11:19:21] [33m[warning][0m server/api/user_api.UserApi.UserUpdateView user_update.go:35 UserUpdateView -> 参数错误:Key: 'UserUpdate.ID' Error:Field validation for 'ID' failed on the 'required' tag

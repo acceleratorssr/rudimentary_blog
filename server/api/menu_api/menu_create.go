@@ -5,7 +5,7 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
-	"server/models/status_type"
+	"server/models/stype"
 )
 
 type ImageSort struct {
@@ -14,15 +14,15 @@ type ImageSort struct {
 }
 
 type MenuRequest struct {
-	MenuTitle   string            `json:"menu_title" binding:"required" msg:"缺少菜单名称"`
-	MenuTitleEn string            `json:"menu_title_en"`
-	Path        string            `json:"path" binding:"required" msg:"缺少菜单路径"`
-	MenuIcon    string            `json:"menu_icon"`
-	MenuTime    int               `json:"menu_time"`
-	Abstract    status_type.Array `json:"abstract"`
-	ParentId    int               `json:"parent_id"`
-	Sort        int               `json:"sort" binding:"required" msg:"缺少菜单排序"`
-	ImageSort   []ImageSort       `json:"image_sort"`
+	MenuTitle   string      `json:"menu_title" binding:"required" msg:"缺少菜单名称"`
+	MenuTitleEn string      `json:"menu_title_en"`
+	Path        string      `json:"path" binding:"required" msg:"缺少菜单路径"`
+	MenuIcon    string      `json:"menu_icon"`
+	MenuTime    int         `json:"menu_time"`
+	Abstract    stype.Array `json:"abstract"`
+	ParentId    int         `json:"parent_id"`
+	Sort        int         `json:"sort" binding:"required" msg:"缺少菜单排序"`
+	ImageSort   []ImageSort `json:"image_sort"`
 }
 
 func (MenuApi) MenuCreateView(c *gin.Context) {

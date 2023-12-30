@@ -6,20 +6,20 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
-	"server/models/status_type"
+	"server/models/stype"
 	"strings"
 )
 
 type son struct {
-	MenuTitle   string            `json:"menu_title"`
-	MenuTitleEn string            `json:"menu_title_en"`
-	Path        string            `json:"path"`
-	MenuIcon    string            `json:"menu_icon"`
-	MenuTime    int               `json:"menu_time"`
-	Abstract    status_type.Array `json:"abstract"`
-	ParentId    int               `json:"parent_id"`
-	Sort        int               `json:"sort"`
-	ImageSort   []ImageSort       `json:"image_sort"`
+	MenuTitle   string      `json:"menu_title"`
+	MenuTitleEn string      `json:"menu_title_en"`
+	Path        string      `json:"path"`
+	MenuIcon    string      `json:"menu_icon"`
+	MenuTime    int         `json:"menu_time"`
+	Abstract    stype.Array `json:"abstract"`
+	ParentId    int         `json:"parent_id"`
+	Sort        int         `json:"sort"`
+	ImageSort   []ImageSort `json:"image_sort"`
 }
 
 type MenuUpdateRequest struct {

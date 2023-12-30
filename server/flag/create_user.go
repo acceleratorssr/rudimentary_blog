@@ -6,7 +6,7 @@ import (
 	"os"
 	"server/global"
 	"server/models"
-	"server/models/status_type"
+	"server/models/stype"
 	"server/utils/pwd"
 )
 
@@ -133,7 +133,7 @@ func CreateUser(permission string) {
 	}
 
 	for {
-		fmt.Printf("请输入手机号码（可选）:")
+		fmt.Printf("请输入绑定的手机号码（可选）:")
 		scanner.Scan()
 		phoneNum = scanner.Text()
 		if phoneNum == "quit" {
@@ -148,7 +148,7 @@ func CreateUser(permission string) {
 	}
 
 	fmt.Println("正在创建用户...")
-	var permissionNum status_type.Permission
+	var permissionNum stype.Permission
 	// 暂时只有两种用户
 	if permission == "admin" {
 		permissionNum = 1

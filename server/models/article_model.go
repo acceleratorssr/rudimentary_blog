@@ -1,7 +1,7 @@
 package models
 
 import (
-	"server/models/status_type"
+	"server/models/stype"
 )
 
 type ArticleModels struct {
@@ -28,7 +28,7 @@ type ArticleModels struct {
 	CommentModels []CommentModels `gorm:"foreignKey:PostID" json:"-"`
 	TagsModel     []TagsModels    `gorm:"many2many:article_tag" json:"tags_model"`
 
-	Tags status_type.Array `gorm:"type:string;size:64" json:"tag"`
+	Tags stype.Array `gorm:"type:string;size:64" json:"tag"`
 
 	// ArticleID uint   `json:"article_id"`
 	//Photo   []ImageModels `gorm:"foreignKey:ArticleID" json:"-"`

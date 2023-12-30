@@ -5,6 +5,7 @@ import (
 	"server/api/jumpTarget_api"
 	"server/api/menu_api"
 	"server/api/settings_api"
+	"server/api/user_api"
 )
 
 type Group struct {
@@ -12,6 +13,7 @@ type Group struct {
 	ImageApi      images_api.ImagesApi
 	JumpTargetApi jumpTarget_api.JumpTargetApi
 	MenuApi       menu_api.MenuApi
+	UserApi       user_api.UserApi
 }
 
 var Groups = new(Group)
