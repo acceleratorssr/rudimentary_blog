@@ -1,0 +1,24 @@
+[gin_project] [2024-01-06 19:10:00] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2024-01-06 19:10:21] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:10:25] [33m[warning][0m server/utils/pwd.CheckPasswords pwd.go:26 密码错误
+[gin_project] [2024-01-06 19:10:25] [33m[warning][0m server/api/user_api.UserApi.UsernameLoginView username_login.go:38 登录 -> 密码错误
+[gin_project] [2024-01-06 19:10:53] [33m[warning][0m server/utils/pwd.CheckPasswords pwd.go:26 密码错误
+[gin_project] [2024-01-06 19:10:53] [33m[warning][0m server/api/user_api.UserApi.UsernameLoginView username_login.go:38 登录 -> 密码错误
+[gin_project] [2024-01-06 19:14:04] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:19:02] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:31:04] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:31:07] [31m[error][0m server/api/user_api.UserApi.OfflineView user_offline.go:29 set token_ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlY29uZCIsInVzZXJfaWQiOjIsIm5pY2tfbmFtZSI6ImtrIiwicGVybWlzc2lvbnMiOjIsImlzcyI6IjEyMyIsImV4cCI6MTcwNDU0NjY2M30.fyrJh9S9LtxQr1K0BYDEUw953v3WUxhFsjVq8rG3_vQ  px 5995155: OK
+[gin_project] [2024-01-06 19:33:14] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:33:22] [31m[error][0m server/api/user_api.UserApi.OfflineView user_offline.go:29 set token_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlY29uZCIsInVzZXJfaWQiOjIsIm5pY2tfbmFtZSI6ImtrIiwicGVybWlzc2lvbnMiOjIsImlzcyI6IjEyMyIsImV4cCI6MTcwNDU0NjY2M30.fyrJh9S9LtxQr1K0BYDEUw953v3WUxhFsjVq8rG3_vQ  px 5860162: OK
+[gin_project] [2024-01-06 19:35:42] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:35:50] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:15 UserListView -> token为空
+[gin_project] [2024-01-06 19:36:06] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuthAdmin.func1 jwt_auth.go:56 UserListView -> 用户权限不足
+[gin_project] [2024-01-06 19:37:08] [31m[error][0m server/api/user_api.UserApi.OfflineView user_offline.go:29 set token_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlY29uZCIsInVzZXJfaWQiOjIsIm5pY2tfbmFtZSI6ImtrIiwicGVybWlzc2lvbnMiOjIsImlzcyI6IjEyMyIsImV4cCI6MTcwNDU0ODIxNX0.P59DDKrkFIQCx68pv9oukZDQAtPxa8cKHAcZCDRIggQ  px 7186856: OK
+[gin_project] [2024-01-06 19:37:30] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:37:32] [31m[error][0m server/api/user_api.UserApi.OfflineView user_offline.go:29 set token_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlY29uZCIsInVzZXJfaWQiOjIsIm5pY2tfbmFtZSI6ImtrIiwicGVybWlzc2lvbnMiOjIsImlzcyI6IjEyMyIsImV4cCI6MTcwNDU0ODIxNX0.P59DDKrkFIQCx68pv9oukZDQAtPxa8cKHAcZCDRIggQ  px 7162332: OK
+[gin_project] [2024-01-06 19:40:49] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:43:04] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:47:36] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:48:55] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:50:54] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-06 19:52:49] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
