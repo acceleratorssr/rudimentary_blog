@@ -1,0 +1,23 @@
+[gin_project] [2024-01-14 14:45:48] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success
+[gin_project] [2024-01-14 14:52:52] [32m[info][0m main.main main.go:35 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 14:52:57] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-01-14 14:53:40] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuthUser.func7 jwt_auth.go:50 UserListView -> 游客权限不足
+[gin_project] [2024-01-14 14:55:22] [32m[info][0m main.main main.go:35 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 14:55:24] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuthUser.func7 jwt_auth.go:50 UserListView -> 游客权限不足
+[gin_project] [2024-01-14 14:57:09] [32m[info][0m main.main main.go:35 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 14:58:16] [32m[info][0m main.main main.go:35 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 14:58:36] [32m[info][0m main.main main.go:35 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 14:59:27] [32m[info][0m main.main main.go:35 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:07:58] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:08:04] [33m[warning][0m server/utils/pwd.CheckPasswords pwd.go:26 密码错误
+[gin_project] [2024-01-14 15:08:04] [33m[warning][0m server/api/user_api.UserApi.UserBindEmailView user_bind_email.go:82 绑定邮箱 -> 密码错误
+[gin_project] [2024-01-14 15:08:07] [33m[warning][0m server/utils/pwd.CheckPasswords pwd.go:26 密码错误
+[gin_project] [2024-01-14 15:08:07] [33m[warning][0m server/api/user_api.UserApi.UserBindEmailView user_bind_email.go:82 绑定邮箱 -> 密码错误
+[gin_project] [2024-01-14 15:15:23] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:15:49] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:16:28] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:17:01] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:18:07] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:18:46] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:19:59] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-14 15:50:21] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190

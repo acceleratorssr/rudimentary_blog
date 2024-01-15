@@ -46,7 +46,7 @@ func JwtAuthUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		parseToken := JwtAuth(c)
 
-		if parseToken.Permissions != int(stype.Permission(2)) {
+		if parseToken.Permissions > int(stype.Permission(2)) {
 			global.Log.Error("UserListView -> 游客权限不足")
 			res.FailWithMessage("需要注册后登录进行操作", c)
 			c.Abort()

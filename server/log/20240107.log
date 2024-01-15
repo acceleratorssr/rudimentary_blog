@@ -1,0 +1,3 @@
+[gin_project] [2024-01-07 21:43:54] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-07 21:44:35] [31m[error][0m server/routers.RouterGroup.UserRouter.JwtAuthUser.func6 jwt_auth.go:50 UserListView -> 游客权限不足
+[gin_project] [2024-01-07 21:45:53] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190

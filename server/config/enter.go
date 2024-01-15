@@ -9,7 +9,8 @@ type Config struct {
 	Wechat   Wechat   `yaml:"wechat"`
 	QiNiu    QiNiu    `yaml:"qi_niu"`
 	Jwt      Jwt      `yaml:"jwt"`
-	Email    Email    `yaml:"email"`
-	Upload   Upload   `yaml:"upload"`
-	Redis    Redis    `yaml:"redis"`
+	Email163 Email    `yaml:"email_163"`
+	//EmailQQ  Email    `yaml:"email_qq"`
+	Upload Upload `yaml:"upload"`
+	Redis  Redis  `yaml:"redis"`
 }

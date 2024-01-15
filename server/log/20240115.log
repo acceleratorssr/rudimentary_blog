@@ -1,0 +1,2 @@
+[gin_project] [2024-01-15 15:12:38] [31m[error][0m server/core.InitRedis redis.go:30 redis连接错误dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+[gin_project] [2024-01-15 15:12:39] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success

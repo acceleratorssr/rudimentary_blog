@@ -54,7 +54,7 @@ func (s SettingsApi) SettingsInfoView(c *gin.Context) {
 			res.OKWithAll(global.Config.Jwt, "success", c)
 		}},
 		{"email", func() {
-			res.OKWithAll(global.Config.Email, "success", c)
+			res.OKWithAll(global.Config.Email163, "success", c)
 		}},
 	}
 

@@ -77,6 +77,7 @@ func FailWithMessage(msg string, c *gin.Context) {
 	Result(error_, nil, msg, c)
 }
 
+// FailWithError 从验证错误中提取字段的自定义错误消息，obj为对应结构体
 func FailWithError(err error, obj any, c *gin.Context) {
 	msg := utils.GetValidMsg(err, obj)
 	FailWithMessage(msg, c)
