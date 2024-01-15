@@ -1,2 +1,9 @@
 [gin_project] [2024-01-15 15:12:38] [31m[error][0m server/core.InitRedis redis.go:30 redis连接错误dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
 [gin_project] [2024-01-15 15:12:39] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success
+[gin_project] [2024-01-15 16:59:27] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-15 16:59:38] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-01-15 16:59:55] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-15 16:59:56] [33m[warning][0m server/api/user_api.UserApi.UserRegisterView user_register.go:45 注册 -> 用户名已存在<nil>
+[gin_project] [2024-01-15 17:02:25] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-15 17:02:52] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-01-15 17:02:52] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token is malformed: token contains an invalid number of segments
