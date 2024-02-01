@@ -28,6 +28,7 @@ type MenuUpdateRequest struct {
 }
 
 // MenuUpdateView 更新菜单
+//
 // @Tags 菜单
 // @Summary  更新菜单
 // @Description 更新菜单的字段或者对应图片

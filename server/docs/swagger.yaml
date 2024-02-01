@@ -7,7 +7,7 @@ definitions:
       msg:
         type: string
     type: object
-  images_api.NameList:
+  images_api.NameListResponse:
     properties:
       id:
         type: integer
@@ -31,18 +31,159 @@ definitions:
     - jump_target_name
     - jump_target_url
     type: object
-  models.ImageModel:
+  menu_api.Image:
+    properties:
+      id:
+        type: integer
+      path:
+        type: string
+    type: object
+  menu_api.ImageSort:
+    properties:
+      image_id:
+        type: integer
+      sort:
+        type: integer
+    type: object
+  menu_api.MenuRequest:
+    properties:
+      abstract:
+        items:
+          type: string
+        type: array
+      image_sort:
+        items:
+          $ref: '#/definitions/menu_api.ImageSort'
+        type: array
+      menu_icon:
+        type: string
+      menu_time:
+        type: integer
+      menu_title:
+        type: string
+      menu_title_en:
+        type: string
+      parent_id:
+        type: integer
+      path:
+        type: string
+      sort:
+        type: integer
+    required:
+    - menu_title
+    - path
+    - sort
+    type: object
+  menu_api.MenuResponse:
+    properties:
+      images:
+        items:
+          $ref: '#/definitions/menu_api.Image'
+        type: array
+      menuModels:
+        $ref: '#/definitions/models.MenuModels'
+    type: object
+  menu_api.MenuUpdateRequest:
+    properties:
+      field_ban_list:
+        type: string
+      son:
+        $ref: '#/definitions/menu_api.son'
+    type: object
+  menu_api.NameListResponse:
+    properties:
+      id:
+        type: integer
+      menu_title:
+        type: string
+      path:
+        type: string
+    type: object
+  menu_api.son:
+    properties:
+      abstract:
+        items:
+          type: string
+        type: array
+      image_sort:
+        items:
+          $ref: '#/definitions/menu_api.ImageSort'
+        type: array
+      menu_icon:
+        type: string
+      menu_time:
+        type: integer
+      menu_title:
+        type: string
+      menu_title_en:
+        type: string
+      parent_id:
+        type: integer
+      path:
+        type: string
+      sort:
+        type: integer
+    type: object
+  message_api.MessageRequest:
+    properties:
+      content:
+        description: 消息内容
+        type: string
+      receive_user_id:
+        description: 接收者ID
+        type: integer
+    required:
+    - content
+    - receive_user_id
+    type: object
+  models.ImageModels:
     properties:
       created_at:
         type: string
       id:
         type: integer
+      image_menus:
+        items:
+          $ref: '#/definitions/models.MenuModels'
+        type: array
       key:
         type: string
       name:
         type: string
       path:
         type: string
+      updated_at:
+        type: string
+    type: object
+  models.MenuModels:
+    properties:
+      abstract:
+        items:
+          type: string
+        type: array
+      created_at:
+        type: string
+      id:
+        type: integer
+      menu_icon:
+        type: string
+      menu_images:
+        items:
+          $ref: '#/definitions/models.ImageModels'
+        type: array
+      menu_time:
+        description: 菜单图片的切换间隔时间
+        type: integer
+      menu_title:
+        type: string
+      menu_title_en:
+        type: string
+      parent_id:
+        type: integer
+      path:
+        type: string
+      sort:
+        type: integer
       updated_at:
         type: string
     type: object
@@ -69,6 +210,94 @@ definitions:
         type: integer
       data: {}
       msg:
+        type: string
+    type: object
+  stype.Permission:
+    enum:
+    - 1
+    - 2
+    - 3
+    - 4
+    type: integer
+    x-enum-varnames:
+    - PermissionAdmin
+    - PermissionUser
+    - PermissionNormal
+    - PermissionBanned
+  user_api.BindEmailRequest:
+    properties:
+      code:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  user_api.UserRegisterRequest:
+    properties:
+      avatar:
+        type: string
+      email:
+        type: string
+      ip:
+        type: string
+      nick_name:
+        type: string
+      password:
+        type: string
+      phone_num:
+        type: string
+      user_name:
+        type: string
+    type: object
+  user_api.UserSelf:
+    properties:
+      avatar:
+        type: string
+      nick_name:
+        type: string
+      phone_num:
+        type: string
+    type: object
+  user_api.UserUpdate:
+    properties:
+      id:
+        type: integer
+      nick_name:
+        type: string
+      permission:
+        allOf:
+        - $ref: '#/definitions/stype.Permission'
+        enum:
+        - 1
+        - 2
+        - 3
+        - 4
+      phone_num:
+        type: string
+      username:
+        type: string
+    required:
+    - id
+    type: object
+  user_api.UsernameLoginRequest:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  user_api.password:
+    properties:
+      new_password:
+        type: string
+      old_password:
         type: string
     type: object
 host: 127.0.0.1:9190
@@ -122,7 +351,7 @@ paths:
           description: OK
           schema:
             items:
-              $ref: '#/definitions/models.ImageModel'
+              $ref: '#/definitions/models.ImageModels'
             type: array
       summary: 获取图片列表
       tags:
@@ -158,7 +387,7 @@ paths:
           description: OK
           schema:
             items:
-              $ref: '#/definitions/images_api.NameList'
+              $ref: '#/definitions/images_api.NameListResponse'
             type: array
       summary: 获取图片名字列表
       tags:
@@ -254,6 +483,348 @@ paths:
       summary: 更新跳转目标
       tags:
       - 跳转的目标
+  /api/menu:
+    delete:
+      consumes:
+      - application/json
+      description: 删除多或者单个菜单
+      parameters:
+      - description: 需要删除的id_list
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.RemoveRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 删除菜单
+      tags:
+      - 菜单
+    get:
+      consumes:
+      - application/json
+      description: 获取所有菜单的列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功响应
+          schema:
+            items:
+              $ref: '#/definitions/menu_api.MenuResponse'
+            type: array
+      summary: 获取菜单列表
+      tags:
+      - 菜单
+    post:
+      consumes:
+      - application/json
+      description: 创建菜单
+      parameters:
+      - description: 创建菜单请求体
+        in: body
+        name: menu
+        required: true
+        schema:
+          $ref: '#/definitions/menu_api.MenuRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功响应
+          schema:
+            $ref: '#/definitions/menu_api.MenuResponse'
+      summary: 创建菜单
+      tags:
+      - 菜单
+    put:
+      consumes:
+      - application/json
+      description: 更新菜单的字段或者对应图片
+      parameters:
+      - description: 需要更新菜单序号
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: 需要更新的字段
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/menu_api.MenuUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 更新菜单
+      tags:
+      - 菜单
+  /api/menuDetail/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 通过ID获取菜单详情
+      parameters:
+      - description: 菜单ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功响应
+          schema:
+            $ref: '#/definitions/menu_api.MenuResponse'
+      summary: 获取菜单详情
+      tags:
+      - 菜单
+  /api/menuName:
+    get:
+      consumes:
+      - application/json
+      description: 获取所有菜单的名称列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功响应
+          schema:
+            items:
+              $ref: '#/definitions/menu_api.NameListResponse'
+            type: array
+      summary: 获取菜单名称列表
+      tags:
+      - 菜单
+  /api/message_send:
+    post:
+      consumes:
+      - application/json
+      description: 发送消息视图，需要接收者ID和消息内容。已登录的用户可以选择一个用户（包括自己）发送一条消息。
+      parameters:
+      - description: 接收者ID&信息内容
+        in: body
+        name: MessageRequest
+        required: true
+        schema:
+          $ref: '#/definitions/message_api.MessageRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 发送成功
+          schema:
+            type: string
+      summary: 发送消息
+      tags:
+      - 消息
+  /api/user_bind_email:
+    post:
+      consumes:
+      - application/json
+      description: 它首先验证用户的存在，然后获取并验证邮箱验证码，如果code为空则代表第一次发送验证码；若验证码验证正确，则它将更新用户的邮箱信息;
+      parameters:
+      - description: 邮箱，用户密码，邮箱验证码
+        in: body
+        name: code
+        required: true
+        schema:
+          $ref: '#/definitions/user_api.BindEmailRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 返回成功消息
+          schema:
+            type: string
+      summary: 用户绑定邮箱
+      tags:
+      - 用户
+  /api/user_change_password:
+    put:
+      consumes:
+      - application/json
+      description: 用户更改密码视图，旧密码验证成功后改为新密码
+      parameters:
+      - description: 新旧密码
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/user_api.password'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 修改成功
+          schema:
+            type: string
+      summary: 用户更改密码
+      tags:
+      - 用户
+  /api/user_list:
+    get:
+      consumes:
+      - application/json
+      description: 查询用户列表
+      parameters:
+      - in: query
+        name: key
+        type: integer
+      - in: query
+        name: limit
+        type: integer
+      - in: query
+        name: page
+        type: integer
+      - in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.Response'
+      summary: 用户列表
+      tags:
+      - 用户
+  /api/user_login:
+    post:
+      consumes:
+      - application/json
+      description: 通过用户名和密码进行登录
+      parameters:
+      - description: 用户名及对应密码
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/user_api.UsernameLoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 返回token
+          schema:
+            type: string
+      summary: 用户名登录
+      tags:
+      - 用户
+  /api/user_offline:
+    post:
+      consumes:
+      - application/json
+      description: 用户下线视图，直接将当前用户的token注销
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success offline
+          schema:
+            type: string
+      summary: 用户下线
+      tags:
+      - 用户
+  /api/user_register:
+    post:
+      consumes:
+      - application/json
+      description: 用户注册视图，需要用户名、昵称和密码。此处前端验证两次输入密码正确后，才会传回信息；会查表以防用户名重复，头像默认，注册成功后自动登录。
+      parameters:
+      - description: 用户名，昵称，密码，头像，IP地址，手机号码邮箱
+        in: body
+        name: UserRegisterRequest
+        required: true
+        schema:
+          $ref: '#/definitions/user_api.UserRegisterRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 注册成功
+          schema:
+            type: string
+      summary: 用户注册
+      tags:
+      - 用户
+  /api/user_remove:
+    delete:
+      consumes:
+      - application/json
+      description: 用户删除视图，需要用户ID列表。删除用户时，注意用户关联的数据也需要删除。
+      parameters:
+      - description: 用户ID列表
+        in: body
+        name: id_list
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功删除%d名用户
+          schema:
+            type: string
+      summary: 用户删除
+      tags:
+      - 用户
+  /api/user_self_update:
+    put:
+      consumes:
+      - application/json
+      description: 用户自我更新视图，可以更改昵称、头像和手机号码。
+      parameters:
+      - description: 可改昵称，头像，手机号
+        in: body
+        name: UserSelf
+        required: true
+        schema:
+          $ref: '#/definitions/user_api.UserSelf'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 修改成功
+          schema:
+            type: string
+      summary: 用户自我更新
+      tags:
+      - 用户
+  /api/user_update:
+    put:
+      consumes:
+      - application/json
+      description: 用户更新视图，需要用户ID，可改权限、用户名、昵称和手机号码。用户名和手机号码需要唯一。
+      parameters:
+      - description: 用户ID，可改权限、用户名、昵称和手机号码
+        in: body
+        name: UserUpdate
+        required: true
+        schema:
+          $ref: '#/definitions/user_api.UserUpdate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 修改成功
+          schema:
+            type: string
+      summary: 管理员可强制更新用户信息
+      tags:
+      - 用户
   /image/upload:
     post:
       consumes:
@@ -277,4 +848,47 @@ paths:
       summary: 上传图片
       tags:
       - 图片
+  /settings/{name}:
+    get:
+      consumes:
+      - application/json
+      description: 设置信息视图，需要具体配置名称。如果找不到该字段，将返回错误信息。
+      parameters:
+      - description: 获取配置名称
+        in: path
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+      summary: 获取配置信息
+      tags:
+      - 配置
+  /settings/update:
+    post:
+      consumes:
+      - application/json
+      description: 配置更新视图，需要一个包含字段名和新值的JSON对象。只有非空字段会被更新。
+      parameters:
+      - description: 字段名和新值的JSON对象
+        in: body
+        name: fields
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 配置更新
+      tags:
+      - 配置
 swagger: "2.0"

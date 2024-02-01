@@ -9,6 +9,7 @@ import (
 )
 
 // ImageUpdateView 更新文件名
+//
 // @Tags 图片
 // @Summary  更新对应的文件名
 // @Description 例如：image

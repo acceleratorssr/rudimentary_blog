@@ -27,6 +27,16 @@ func isOnly(only []string, n string) bool {
 	return false
 }
 
+// UserUpdateView 是一个API视图，用于处理用户更新的请求
+//
+// @Summary 管理员可强制更新用户信息
+// @Description 用户更新视图，需要用户ID，可改权限、用户名、昵称和手机号码。用户名和手机号码需要唯一。
+// @Tags 用户
+// @Accept json
+// @Produce json
+// @Param UserUpdate body UserUpdate true "用户ID，可改权限、用户名、昵称和手机号码"
+// @Success 200 {string} string "修改成功"
+// @Router /api/user_update [put]
 func (UserApi) UserUpdateView(c *gin.Context) {
 	onlyOne := []string{"Username", "PhoneNum"}
 	var UUp UserUpdate

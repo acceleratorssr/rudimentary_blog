@@ -9,6 +9,7 @@ import (
 )
 
 // ImageRemoveView 删除文件
+//
 // @Tags 图片
 // @Summary  删除对应的文件
 // @Description 例如：image

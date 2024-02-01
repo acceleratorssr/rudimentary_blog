@@ -70,6 +70,16 @@ type FieldUpdater struct {
 	UpdateFunc func(interface{})
 }
 
+// SettingsUpdate 是一个API视图，用于处理配置更新的请求
+//
+// @Summary 配置更新
+// @Description 配置更新视图，需要一个包含字段名和新值的JSON对象。只有非空字段会被更新。
+// @Tags 配置
+// @Accept json
+// @Produce json
+// @Param fields body object true "字段名和新值的JSON对象"
+// @Success 200 {string} string "OK"
+// @Router /settings/update [post]
 func (s SettingsApi) SettingsUpdate(c *gin.Context) {
 	var cs map[string]string
 	err := c.ShouldBindJSON(&cs)

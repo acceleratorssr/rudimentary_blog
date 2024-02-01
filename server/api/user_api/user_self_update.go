@@ -15,6 +15,16 @@ type UserSelf struct {
 	PhoneNum string `json:"phone_num"`
 }
 
+// UserSelfUpdateView 是一个API视图，用于处理用户自我更新的请求
+//
+// @Summary 用户自我更新
+// @Description 用户自我更新视图，可以更改昵称、头像和手机号码。
+// @Tags 用户
+// @Accept json
+// @Produce json
+// @Param UserSelf body UserSelf true "可改昵称，头像，手机号"
+// @Success 200 {string} string "修改成功"
+// @Router /api/user_self_update [put]
 func (UserApi) UserSelfUpdateView(c *gin.Context) {
 	var user models.UserModels
 	var USUp UserSelf

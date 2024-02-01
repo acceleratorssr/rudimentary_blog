@@ -1,0 +1,16 @@
+[gin_project] [2024-01-18 16:03:48] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-18 16:04:26] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-18 16:04:28] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-01-18 16:05:41] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-18 16:06:16] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-18 16:06:25] [31m[error][0m server/api/message_api.MessageApi.MessageSend message_send.go:24 MessageSend -> 参数绑定失败 EOF
+[gin_project] [2024-01-18 16:07:31] [31m[error][0m server/api/message_api.MessageApi.MessageSend message_send.go:24 MessageSend -> 参数绑定失败 EOF
+[gin_project] [2024-01-18 16:08:23] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-18 16:08:24] [31m[error][0m server/api/message_api.MessageApi.MessageSend message_send.go:24 MessageSend -> 参数绑定失败 EOF
+[gin_project] [2024-01-18 16:08:37] [31m[error][0m server/api/message_api.MessageApi.MessageSend message_send.go:24 MessageSend -> 参数绑定失败 Key: 'MessageRequest.SendUserID' Error:Field validation for 'SendUserID' failed on the 'required' tag
+Key: 'MessageRequest.ReceiveUserID' Error:Field validation for 'ReceiveUserID' failed on the 'required' tag
+Key: 'MessageRequest.Content' Error:Field validation for 'Content' failed on the 'required' tag
+[gin_project] [2024-01-18 16:10:43] [31m[error][0m server/api/message_api.MessageApi.MessageSend message_send.go:24 MessageSend -> 参数绑定失败 Key: 'MessageRequest.SendUserID' Error:Field validation for 'SendUserID' failed on the 'required' tag
+Key: 'MessageRequest.ReceiveUserID' Error:Field validation for 'ReceiveUserID' failed on the 'required' tag
+[gin_project] [2024-01-18 16:10:49] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-01-18 16:10:50] [31m[error][0m server/api/message_api.MessageApi.MessageSend message_send.go:24 MessageSend -> 参数绑定失败 Key: 'MessageRequest.ReceiveUserID' Error:Field validation for 'ReceiveUserID' failed on the 'required' tag

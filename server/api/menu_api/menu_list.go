@@ -17,6 +17,15 @@ type MenuResponse struct {
 	Images     []Image `json:"images"`
 }
 
+// MenuListView 菜单列表视图
+//
+// @Summary 获取菜单列表
+// @Description 获取所有菜单的列表
+// @Tags 菜单
+// @Accept json
+// @Produce json
+// @Success 200 {array} MenuResponse "成功响应"
+// @Router /api/menu [get]
 func (MenuApi) MenuListView(c *gin.Context) {
 	var menuList []models.MenuModels
 	var menuIDList []uint

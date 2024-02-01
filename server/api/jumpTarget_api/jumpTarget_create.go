@@ -15,6 +15,7 @@ type JumpTargetRequest struct {
 }
 
 // JumpTargetCreateView 添加跳转的目标
+//
 // @Tags 跳转的目标
 // @Summary  添加跳转目标
 // @Description 添加跳转的目标

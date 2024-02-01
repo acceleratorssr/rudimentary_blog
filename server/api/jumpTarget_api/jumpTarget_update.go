@@ -9,6 +9,7 @@ import (
 )
 
 // JumpTargetUpdateView 更新跳转的目标
+//
 // @Tags 跳转的目标
 // @Summary  更新跳转目标
 // @Description 更新跳转的目标

@@ -44,7 +44,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/models.ImageModel"
+                                "$ref": "#/definitions/models.ImageModels"
                             }
                         }
                     }
@@ -131,7 +131,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/images_api.NameList"
+                                "$ref": "#/definitions/images_api.NameListResponse"
                             }
                         }
                     }
@@ -279,6 +279,533 @@
                 }
             }
         },
+        "/api/menu": {
+            "get": {
+                "description": "获取所有菜单的列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "获取菜单列表",
+                "responses": {
+                    "200": {
+                        "description": "成功响应",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/menu_api.MenuResponse"
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "更新菜单的字段或者对应图片",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "更新菜单",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "需要更新菜单序号",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "description": "需要更新的字段",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/menu_api.MenuUpdateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/res.Response"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "创建菜单",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "创建菜单",
+                "parameters": [
+                    {
+                        "description": "创建菜单请求体",
+                        "name": "menu",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/menu_api.MenuRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功响应",
+                        "schema": {
+                            "$ref": "#/definitions/menu_api.MenuResponse"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "删除多或者单个菜单",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "删除菜单",
+                "parameters": [
+                    {
+                        "description": "需要删除的id_list",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RemoveRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/res.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/menuDetail/{id}": {
+            "get": {
+                "description": "通过ID获取菜单详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "获取菜单详情",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "菜单ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功响应",
+                        "schema": {
+                            "$ref": "#/definitions/menu_api.MenuResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/menuName": {
+            "get": {
+                "description": "获取所有菜单的名称列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "获取菜单名称列表",
+                "responses": {
+                    "200": {
+                        "description": "成功响应",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/menu_api.NameListResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/message_send": {
+            "post": {
+                "description": "发送消息视图，需要接收者ID和消息内容。已登录的用户可以选择一个用户（包括自己）发送一条消息。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "消息"
+                ],
+                "summary": "发送消息",
+                "parameters": [
+                    {
+                        "description": "接收者ID\u0026信息内容",
+                        "name": "MessageRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/message_api.MessageRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "发送成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_bind_email": {
+            "post": {
+                "description": "它首先验证用户的存在，然后获取并验证邮箱验证码，如果code为空则代表第一次发送验证码；若验证码验证正确，则它将更新用户的邮箱信息;",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户绑定邮箱",
+                "parameters": [
+                    {
+                        "description": "邮箱，用户密码，邮箱验证码",
+                        "name": "code",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user_api.BindEmailRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "返回成功消息",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_change_password": {
+            "put": {
+                "description": "用户更改密码视图，旧密码验证成功后改为新密码",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户更改密码",
+                "parameters": [
+                    {
+                        "description": "新旧密码",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user_api.password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "修改成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_list": {
+            "get": {
+                "description": "查询用户列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户列表",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "name": "key",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "name": "limit",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "name": "page",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "name": "sort",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/res.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_login": {
+            "post": {
+                "description": "通过用户名和密码进行登录",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户名登录",
+                "parameters": [
+                    {
+                        "description": "用户名及对应密码",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user_api.UsernameLoginRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "返回token",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_offline": {
+            "post": {
+                "description": "用户下线视图，直接将当前用户的token注销",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户下线",
+                "responses": {
+                    "200": {
+                        "description": "success offline",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_register": {
+            "post": {
+                "description": "用户注册视图，需要用户名、昵称和密码。此处前端验证两次输入密码正确后，才会传回信息；会查表以防用户名重复，头像默认，注册成功后自动登录。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户注册",
+                "parameters": [
+                    {
+                        "description": "用户名，昵称，密码，头像，IP地址，手机号码邮箱",
+                        "name": "UserRegisterRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user_api.UserRegisterRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "注册成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_remove": {
+            "delete": {
+                "description": "用户删除视图，需要用户ID列表。删除用户时，注意用户关联的数据也需要删除。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户删除",
+                "parameters": [
+                    {
+                        "description": "用户ID列表",
+                        "name": "id_list",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功删除%d名用户",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_self_update": {
+            "put": {
+                "description": "用户自我更新视图，可以更改昵称、头像和手机号码。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户自我更新",
+                "parameters": [
+                    {
+                        "description": "可改昵称，头像，手机号",
+                        "name": "UserSelf",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user_api.UserSelf"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "修改成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_update": {
+            "put": {
+                "description": "用户更新视图，需要用户ID，可改权限、用户名、昵称和手机号码。用户名和手机号码需要唯一。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "管理员可强制更新用户信息",
+                "parameters": [
+                    {
+                        "description": "用户ID，可改权限、用户名、昵称和手机号码",
+                        "name": "UserUpdate",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user_api.UserUpdate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "修改成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/image/upload": {
             "post": {
                 "description": "上传图片到服务器，并在数据库中保存图片信息",
@@ -313,6 +840,72 @@
                     }
                 }
             }
+        },
+        "/settings/update": {
+            "post": {
+                "description": "配置更新视图，需要一个包含字段名和新值的JSON对象。只有非空字段会被更新。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "配置"
+                ],
+                "summary": "配置更新",
+                "parameters": [
+                    {
+                        "description": "字段名和新值的JSON对象",
+                        "name": "fields",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/settings/{name}": {
+            "get": {
+                "description": "设置信息视图，需要具体配置名称。如果找不到该字段，将返回错误信息。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "配置"
+                ],
+                "summary": "获取配置信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "获取配置名称",
+                        "name": "name",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -327,7 +920,7 @@
                 }
             }
         },
-        "images_api.NameList": {
+        "images_api.NameListResponse": {
             "type": "object",
             "properties": {
                 "id": {
@@ -363,7 +956,166 @@
                 }
             }
         },
-        "models.ImageModel": {
+        "menu_api.Image": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "path": {
+                    "type": "string"
+                }
+            }
+        },
+        "menu_api.ImageSort": {
+            "type": "object",
+            "properties": {
+                "image_id": {
+                    "type": "integer"
+                },
+                "sort": {
+                    "type": "integer"
+                }
+            }
+        },
+        "menu_api.MenuRequest": {
+            "type": "object",
+            "required": [
+                "menu_title",
+                "path",
+                "sort"
+            ],
+            "properties": {
+                "abstract": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "image_sort": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/menu_api.ImageSort"
+                    }
+                },
+                "menu_icon": {
+                    "type": "string"
+                },
+                "menu_time": {
+                    "type": "integer"
+                },
+                "menu_title": {
+                    "type": "string"
+                },
+                "menu_title_en": {
+                    "type": "string"
+                },
+                "parent_id": {
+                    "type": "integer"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "sort": {
+                    "type": "integer"
+                }
+            }
+        },
+        "menu_api.MenuResponse": {
+            "type": "object",
+            "properties": {
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/menu_api.Image"
+                    }
+                },
+                "menuModels": {
+                    "$ref": "#/definitions/models.MenuModels"
+                }
+            }
+        },
+        "menu_api.MenuUpdateRequest": {
+            "type": "object",
+            "properties": {
+                "field_ban_list": {
+                    "type": "string"
+                },
+                "son": {
+                    "$ref": "#/definitions/menu_api.son"
+                }
+            }
+        },
+        "menu_api.NameListResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "menu_title": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                }
+            }
+        },
+        "menu_api.son": {
+            "type": "object",
+            "properties": {
+                "abstract": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "image_sort": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/menu_api.ImageSort"
+                    }
+                },
+                "menu_icon": {
+                    "type": "string"
+                },
+                "menu_time": {
+                    "type": "integer"
+                },
+                "menu_title": {
+                    "type": "string"
+                },
+                "menu_title_en": {
+                    "type": "string"
+                },
+                "parent_id": {
+                    "type": "integer"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "sort": {
+                    "type": "integer"
+                }
+            }
+        },
+        "message_api.MessageRequest": {
+            "type": "object",
+            "required": [
+                "content",
+                "receive_user_id"
+            ],
+            "properties": {
+                "content": {
+                    "description": "消息内容",
+                    "type": "string"
+                },
+                "receive_user_id": {
+                    "description": "接收者ID",
+                    "type": "integer"
+                }
+            }
+        },
+        "models.ImageModels": {
             "type": "object",
             "properties": {
                 "created_at": {
@@ -371,6 +1123,12 @@
                 },
                 "id": {
                     "type": "integer"
+                },
+                "image_menus": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.MenuModels"
+                    }
                 },
                 "key": {
                     "type": "string"
@@ -380,6 +1138,54 @@
                 },
                 "path": {
                     "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.MenuModels": {
+            "type": "object",
+            "properties": {
+                "abstract": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "menu_icon": {
+                    "type": "string"
+                },
+                "menu_images": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.ImageModels"
+                    }
+                },
+                "menu_time": {
+                    "description": "菜单图片的切换间隔时间",
+                    "type": "integer"
+                },
+                "menu_title": {
+                    "type": "string"
+                },
+                "menu_title_en": {
+                    "type": "string"
+                },
+                "parent_id": {
+                    "type": "integer"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "sort": {
+                    "type": "integer"
                 },
                 "updated_at": {
                     "type": "string"
@@ -420,6 +1226,138 @@
                 },
                 "data": {},
                 "msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "stype.Permission": {
+            "type": "integer",
+            "enum": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "x-enum-varnames": [
+                "PermissionAdmin",
+                "PermissionUser",
+                "PermissionNormal",
+                "PermissionBanned"
+            ]
+        },
+        "user_api.BindEmailRequest": {
+            "type": "object",
+            "required": [
+                "email",
+                "password"
+            ],
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "user_api.UserRegisterRequest": {
+            "type": "object",
+            "properties": {
+                "avatar": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "ip": {
+                    "type": "string"
+                },
+                "nick_name": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "phone_num": {
+                    "type": "string"
+                },
+                "user_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "user_api.UserSelf": {
+            "type": "object",
+            "properties": {
+                "avatar": {
+                    "type": "string"
+                },
+                "nick_name": {
+                    "type": "string"
+                },
+                "phone_num": {
+                    "type": "string"
+                }
+            }
+        },
+        "user_api.UserUpdate": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nick_name": {
+                    "type": "string"
+                },
+                "permission": {
+                    "enum": [
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/stype.Permission"
+                        }
+                    ]
+                },
+                "phone_num": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "user_api.UsernameLoginRequest": {
+            "type": "object",
+            "required": [
+                "password",
+                "username"
+            ],
+            "properties": {
+                "password": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "user_api.password": {
+            "type": "object",
+            "properties": {
+                "new_password": {
+                    "type": "string"
+                },
+                "old_password": {
                     "type": "string"
                 }
             }

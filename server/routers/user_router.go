@@ -14,6 +14,6 @@ func (RG RouterGroup) UserRouter() {
 	RG.Router.PUT("/user_change_password", middleware.JwtAuthUser(), userApi.UserChangePasswordView)
 	RG.Router.POST("/user_offline", middleware.JwtAuthUser(), userApi.OfflineView)
 	RG.Router.DELETE("/user_remove", middleware.JwtAuthAdmin(), userApi.UserRemoveView)
-	RG.Router.PUT("/user_bind_email", middleware.JwtAuthUser(), userApi.UserBindEmailView)
-	RG.Router.PUT("/user_register", userApi.UserRegisterView)
+	RG.Router.POST("/user_bind_email", middleware.JwtAuthUser(), userApi.UserBindEmailView)
+	RG.Router.POST("/user_register", userApi.UserRegisterView)
 }

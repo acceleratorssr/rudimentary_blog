@@ -1,0 +1,17 @@
+[gin_project] [2024-02-01 11:09:46] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2024-02-01 11:10:09] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2024-02-01 11:10:15] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 11:22:29] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 11:23:43] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 11:24:58] [31m[error][0m server/api/user_api.UserApi.UsernameLoginView username_login.go:31 UsernameLogin参数验证失败:json: cannot unmarshal number into Go value of type user_api.UsernameLoginRequest
+[gin_project] [2024-02-01 11:25:51] [31m[error][0m server/api/user_api.UserApi.UsernameLoginView username_login.go:31 UsernameLogin参数验证失败:json: cannot unmarshal number into Go value of type user_api.UsernameLoginRequest
+[gin_project] [2024-02-01 11:28:31] [31m[error][0m server/api/user_api.UserApi.UsernameLoginView username_login.go:31 UsernameLogin参数验证失败:json: cannot unmarshal string into Go value of type user_api.UsernameLoginRequest
+[gin_project] [2024-02-01 11:46:03] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 11:46:28] [33m[warning][0m server/api/user_api.UserApi.UsernameLoginView username_login.go:38 登录 -> 用户名不存在record not found
+[gin_project] [2024-02-01 14:58:49] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 15:08:41] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 15:13:59] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 16:00:49] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 16:05:08] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 16:10:53] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 16:11:29] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190

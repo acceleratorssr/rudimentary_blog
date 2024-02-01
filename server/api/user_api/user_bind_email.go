@@ -75,8 +75,15 @@ func sendMail(sender, userAddr, authCode, host, mailTo, userName, subject, body 
 }
 
 // UserBindEmailView 是一个处理用户绑定邮箱请求的视图函数;
-// 它首先验证用户的存在性，然后获取并验证邮箱验证码;
-// 如果验证码正确，它将更新用户的邮箱信息;
+//
+// @Summary 用户绑定邮箱
+// @Description 它首先验证用户的存在，然后获取并验证邮箱验证码，如果code为空则代表第一次发送验证码；若验证码验证正确，则它将更新用户的邮箱信息;
+// @Tags 用户
+// @Accept  json
+// @Produce  json
+// @Param   code       body    BindEmailRequest     true       "邮箱，用户密码，邮箱验证码"
+// @Success 200 {string} string	"返回成功消息"
+// @Router /api/user_bind_email [post]
 func (UserApi) UserBindEmailView(c *gin.Context) {
 	var BER BindEmailRequest
 	var userModel models.UserModels

@@ -7,7 +7,16 @@ import (
 	"server/service/common"
 )
 
+type ImageModelForSwagger struct {
+	models.MODEL
+	Path string `json:"path"`
+	Key  string `json:"key"`
+	Name string `gorm:"sizeof:32" json:"name"`
+	// 不包含ImageMenus字段
+}
+
 // ImageListView
+//
 // @Summary 获取图片列表
 // @Description 根据分页参数获取图片列表
 // @Tags 图片

@@ -13,6 +13,15 @@ type NameListResponse struct {
 	Path      string `json:"path"`
 }
 
+// MenuNameListView 菜单名称列表视图
+//
+// @Summary 获取菜单名称列表
+// @Description 获取所有菜单的名称列表
+// @Tags 菜单
+// @Accept json
+// @Produce json
+// @Success 200 {array} NameListResponse "成功响应"
+// @Router /api/menuName [get]
 func (MenuApi) MenuNameListView(c *gin.Context) {
 	var menuNameList []NameListResponse
 

@@ -33,6 +33,7 @@ type FileUploadResponse struct {
 }
 
 // ImageUploadView 上传图片
+//
 // @Summary 上传图片
 // @Description 上传图片到服务器，并在数据库中保存图片信息
 // @Tags 图片

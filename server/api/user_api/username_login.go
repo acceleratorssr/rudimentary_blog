@@ -15,8 +15,14 @@ type UsernameLoginRequest struct {
 }
 
 // UsernameLoginView 用户登录
-// @Summary 用户登录
+// @Summary 用户名登录
+// @Description 通过用户名和密码进行登录
 // @Tags 用户
+// @Accept  json
+// @Produce  json
+// @Param data body UsernameLoginRequest true "用户名及对应密码"
+// @Success 200 {string} string	"返回token"
+// @Router /api/user_login [post]
 func (UserApi) UsernameLoginView(c *gin.Context) {
 	var ULR UsernameLoginRequest
 	err := c.ShouldBindJSON(&ULR)

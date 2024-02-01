@@ -9,6 +9,7 @@ import (
 )
 
 // JumpTargetRemoveView 删除跳转的目标
+//
 // @Tags 跳转的目标
 // @Summary  删除跳转目标
 // @Description 删除跳转的目标

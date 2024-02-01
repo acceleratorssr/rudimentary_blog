@@ -14,11 +14,12 @@ type NameListResponse struct {
 }
 
 // ImageNameListView
+//
 // @Summary 获取图片名字列表
 // @Description 返回所有图片名字
 // @Tags 图片
 // @Produce json
-// @Success 200 {array} NameList
+// @Success 200 {array} NameListResponse
 // @Router /api/imagesName [get]
 func (ImagesApi) ImageNameListView(c *gin.Context) {
 	var imageNameList []NameListResponse

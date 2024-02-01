@@ -15,6 +15,16 @@ type password struct {
 	OldPassword string `json:"old_password"`
 }
 
+// UserChangePasswordView 是一个API视图，用于处理用户更改密码的请求
+//
+// @Summary 用户更改密码
+// @Description 用户更改密码视图，旧密码验证成功后改为新密码
+// @Tags 用户
+// @Accept json
+// @Produce json
+// @Param data body password true "新旧密码"
+// @Success 200 {string} string "修改成功"
+// @Router /api/user_change_password [put]
 func (UserApi) UserChangePasswordView(c *gin.Context) {
 	var user models.UserModels
 	var mm password

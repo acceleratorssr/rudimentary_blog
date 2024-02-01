@@ -10,6 +10,7 @@ import (
 )
 
 // MenuRemoveView 删除菜单
+//
 // @Tags 菜单
 // @Summary  删除菜单
 // @Description 删除多或者单个菜单
