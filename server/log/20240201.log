@@ -15,3 +15,24 @@
 [gin_project] [2024-02-01 16:05:08] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
 [gin_project] [2024-02-01 16:10:53] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
 [gin_project] [2024-02-01 16:11:29] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 19:14:35] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2024-02-01 19:14:41] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:09:22] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:11:25] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:12:11] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:12:49] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-01 20:12:49] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-01 20:14:23] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:14:59] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:15:54] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:16:38] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:18:33] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:21:05] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:21:30] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:22:35] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-01 20:23:50] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:38:56] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-01 20:38:56] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-01 20:40:26] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 20:51:02] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-01 21:42:22] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local

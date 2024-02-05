@@ -1,0 +1,17 @@
+[gin_project] [2024-02-03 09:45:30] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-03 09:46:23] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-03 10:46:09] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-03 10:57:38] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-03 11:06:33] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-03 11:08:42] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-03 11:09:06] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-03 18:19:16] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-03 18:21:05] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-03 18:49:31] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-03 18:49:35] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-03 18:49:40] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-03 18:50:46] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-03 18:51:30] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-03 18:52:36] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-03 18:54:09] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-03 19:51:08] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190

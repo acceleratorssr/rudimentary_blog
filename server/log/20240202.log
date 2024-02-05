@@ -1,0 +1,49 @@
+[gin_project] [2024-02-02 14:16:31] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 14:31:08] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 14:32:47] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 15:15:14] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 15:24:40] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-02 15:25:40] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 15:29:50] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 15:32:26] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 16:17:02] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2024-02-02 16:17:11] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2024-02-02 16:17:44] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 16:20:37] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 16:24:57] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 16:29:48] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 16:33:26] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 17:36:34] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 17:39:52] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 18:27:53] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 18:56:13] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 19:19:28] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 19:20:49] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 19:23:38] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 19:37:55] [31m[error][0m server/core.InitGorm gorm.go:33 mysql [%s] connect errorroot:20031214pzw!@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local
+[gin_project] [2024-02-02 19:38:28] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 19:49:27] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 20:03:16] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 20:09:39] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 20:15:10] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 20:49:55] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 21:26:09] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 21:31:59] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 21:32:11] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:32:26] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:34:40] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:35:46] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 21:35:57] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:36:10] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:38:06] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-02 21:38:30] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:41:44] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:43:53] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:43:58] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:47:09] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:48:53] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:49:08] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:49:20] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:51:46] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:52:49] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments
+[gin_project] [2024-02-02 21:54:01] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token is malformed: token contains an invalid number of segments

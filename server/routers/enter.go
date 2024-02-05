@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	gs "github.com/swaggo/gin-swagger"
@@ -15,6 +16,18 @@ type RouterGroup struct {
 func InitRouters() *gin.Engine {
 	gin.SetMode(global.Config.System.Env)
 	r := gin.Default()
+	r.GET("/", func(c *gin.Context) {
+		c.String(200, "Welcome to the world of GoFrame!")
+	})
+
+	config := cors.DefaultConfig()
+	//config.AllowAllOrigins = true	//全允许
+	config.AllowOrigins = []string{"http://localhost:8000", "http://127.0.0.1"}                          // 只允许 "http://127.0.0.1" 这个域名的请求
+	config.AllowMethods = []string{"GET", "POST", "DELETE", "PUT", "OPTIONS"}                            // 允许的请求方法
+	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "authorization", "token"} // 允许的请求头
+	//config.AllowCredentials = true                                              // 允许接收和发送cookies
+	r.Use(cors.New(config))
+
 	// *any是一个通配符，表示可以匹配/swagger/后的任何内容
 	r.GET("/swagger/*any", gs.WrapHandler(swaggerFiles.Handler))
 
@@ -30,6 +43,7 @@ func InitRouters() *gin.Engine {
 	routerGroupApp.MenuRouter()
 	routerGroupApp.UserRouter()
 	routerGroupApp.MessageRouter()
+	routerGroupApp.InterfaceRouter()
 
 	return r
 }

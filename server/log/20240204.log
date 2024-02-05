@@ -1,0 +1,41 @@
+[gin_project] [2024-02-04 15:34:19] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 15:58:30] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 15:58:34] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 15:58:34] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-04 16:03:36] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 16:03:36] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-04 16:37:34] [32m[info][0m server/flag.Makemigrations db.go:43 Makemigrations success
+[gin_project] [2024-02-04 16:38:58] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2024-02-04 16:50:02] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2024-02-04 16:58:13] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 17:03:02] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 17:04:34] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 17:05:55] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:37 创建接口失败 UserRegisterView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-04 17:10:04] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 17:10:30] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 17:57:07] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:01:37] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:01:57] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:02:19] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:02:37] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:03:45] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:04:01] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:71 接口注册 -> 接口注册入数据库后返回数据失败Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://www.baidu.com ORDER BY `interface_models`.`id` LIMIT 1' at line 1
+[gin_project] [2024-02-04 18:04:58] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:13:43] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:17:13] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:20:49] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:54] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:54] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:58] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:58] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:59] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:59] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:59] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:20:59] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:25 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-04 18:39:22] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:53:07] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 18:55:25] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 19:01:09] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-04 19:01:30] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-04 19:01:39] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:17 UserListView -> token为空
+[gin_project] [2024-02-04 19:09:14] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190

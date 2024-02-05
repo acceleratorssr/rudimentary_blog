@@ -2,7 +2,6 @@ package middleware
 
 import (
 	"context"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"server/global"
 	"server/models/res"
@@ -31,7 +30,6 @@ func JwtAuth(c *gin.Context) (parseToken *jwts.CustomClaims) {
 	// 判断token是否被注销
 	keys, _ := global.Redis.Keys(ctx, "token_*").Result()
 	for _, key := range keys {
-		fmt.Println(key)
 		if key == "token_"+token {
 			res.FailWithMessage("token已注销", c)
 			c.Abort()

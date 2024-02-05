@@ -1,7 +1,5 @@
 package stype
 
-import "encoding/json"
-
 // Permission 管理员1，用户2，普通3，禁止4
 type Permission int
 
@@ -12,9 +10,9 @@ const (
 	PermissionBanned
 )
 
-func (p Permission) MarshalJSON() ([]byte, error) {
-	return json.Marshal(p.String())
-}
+//func (p Permission) MarshalJSON() ([]byte, error) {
+//	return json.Marshal(p.String())
+//}
 
 func (p Permission) String() string {
 	switch p {

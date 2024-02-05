@@ -15,13 +15,13 @@ type UsernameLoginRequest struct {
 }
 
 // UsernameLoginView 用户登录
-// @Summary 用户名登录
-// @Description 通过用户名和密码进行登录
+// @Summary 用户名登录视图
+// @Description 使用用户名和密码进行登录，成功后返回token
 // @Tags 用户
-// @Accept  json
-// @Produce  json
-// @Param data body UsernameLoginRequest true "用户名及对应密码"
-// @Success 200 {string} string	"返回token"
+// @Accept json
+// @Produce json
+// @Param ULR body UsernameLoginRequest true "登录请求"
+// @Success 200 {object} models.UserModels "成功返回用户信息和token"
 // @Router /api/user_login [post]
 func (UserApi) UsernameLoginView(c *gin.Context) {
 	var ULR UsernameLoginRequest
@@ -58,5 +58,6 @@ func (UserApi) UsernameLoginView(c *gin.Context) {
 		res.FailWithMessage("登录失败", c)
 		return
 	}
-	res.OKWithData(token, c)
+	userModel.Token = token
+	res.OKWithData(userModel, c)
 }
