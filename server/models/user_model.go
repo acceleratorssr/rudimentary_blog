@@ -17,6 +17,8 @@ type UserModels struct {
 	Email    string `gorm:"size:128" json:"email"`
 	// admin:1 user:2 normal:3 banned:4
 	Permission stype.Permission `gorm:"size:4;not null;default:1" json:"permission"`
+	AccessKey  string           `json:"access_key"`
+	SecretKey  string           `json:"secret_key"`
 
 	SignStatus    stype.SignStatus `gorm:"type=smallint(6);not null" json:"sign_status"`
 	ArticleModels []ArticleModels  `gorm:"foreignKey:AuthorID" json:"-"`

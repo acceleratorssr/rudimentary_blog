@@ -223,6 +223,74 @@ const docTemplate = `{
                 }
             }
         },
+        "/api/interface_remove": {
+            "post": {
+                "description": "接口删除视图",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "接口"
+                ],
+                "summary": "接口删除",
+                "parameters": [
+                    {
+                        "description": "接口ID列表",
+                        "name": "id_list",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功删除%d个接口",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/interface_update": {
+            "post": {
+                "description": "接口更新视图",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "接口"
+                ],
+                "summary": "管理员更新接口信息",
+                "parameters": [
+                    {
+                        "description": "用户ID，可改接口名称、描述、url、请求方法、请求头、响应头、接口状态",
+                        "name": "InterfaceUpdateRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/interface_api.InterfaceUpdateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "修改成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/api/jumpTarget": {
             "get": {
                 "description": "查询跳转的目标",
@@ -1047,8 +1115,7 @@ const docTemplate = `{
             "required": [
                 "interface_name",
                 "method",
-                "url",
-                "user_id"
+                "url"
             ],
             "properties": {
                 "description": {
@@ -1067,13 +1134,45 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "status": {
-                    "type": "integer"
+                    "type": "string"
                 },
                 "url": {
                     "type": "string"
                 },
                 "user_id": {
                     "type": "integer"
+                }
+            }
+        },
+        "interface_api.InterfaceUpdateRequest": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "interface_name": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "request_header": {
+                    "type": "string"
+                },
+                "response_header": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
                 }
             }
         },
@@ -1315,7 +1414,7 @@ const docTemplate = `{
                 },
                 "status": {
                     "description": "接口状态，0上线，1下线",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "updated_at": {
                     "type": "string"

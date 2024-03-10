@@ -31,10 +31,9 @@ func InitRouters() *gin.Engine {
 	// *any是一个通配符，表示可以匹配/swagger/后的任何内容
 	r.GET("/swagger/*any", gs.WrapHandler(swaggerFiles.Handler))
 
-	router := r.Group("api")
-
+	apiRouter := r.Group("api")
 	// 创建一个自定义的 RouterGroup 结构体实例，该实例包含了一个具有 "/api" 前缀的路由分组
-	routerGroupApp := RouterGroup{router}
+	routerGroupApp := RouterGroup{apiRouter}
 	// 在settings_api.go中定义了SettingsApi结构体，这里使用该结构体初始化路由
 	// 该结构体中定义了SettingsInfoView方法，该方法对应路由/settings/info
 	routerGroupApp.SettingsRouter()
@@ -44,6 +43,7 @@ func InitRouters() *gin.Engine {
 	routerGroupApp.UserRouter()
 	routerGroupApp.MessageRouter()
 	routerGroupApp.InterfaceRouter()
+	routerGroupApp.ControllerRouter()
 
 	return r
 }

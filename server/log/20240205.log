@@ -1,0 +1,49 @@
+[gin_project] [2024-02-05 15:28:55] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 15:36:20] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-05 15:36:23] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-05 15:36:23] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:24 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-05 15:50:59] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:37 创建接口失败 UserRegisterView ->  json: cannot unmarshal string into Go struct field InterfaceAddRequest.status of type uint
+[gin_project] [2024-02-05 15:53:16] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:37 创建接口失败 UserRegisterView ->  json: cannot unmarshal string into Go struct field InterfaceAddRequest.status of type uint
+[gin_project] [2024-02-05 15:55:14] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:37 创建接口失败 UserRegisterView ->  json: cannot unmarshal string into Go struct field InterfaceAddRequest.status of type uint
+[gin_project] [2024-02-05 15:59:41] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:37 创建接口失败 UserRegisterView ->  json: cannot unmarshal string into Go struct field InterfaceAddRequest.status of type uint
+[gin_project] [2024-02-05 16:04:16] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 16:04:59] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:37 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.UserId' Error:Field validation for 'UserId' failed on the 'required' tag
+[gin_project] [2024-02-05 16:12:36] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 16:36:45] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 17:11:40] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 17:12:14] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 17:15:14] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 17:18:05] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 17:19:40] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 17:19:49] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 17:21:51] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 17:22:12] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:38 创建接口失败 InterfaceAddView ->  Key: 'InterfaceAddRequest.Url' Error:Field validation for 'Url' failed on the 'url' tag
+[gin_project] [2024-02-05 18:17:04] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 18:27:08] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:69 接口注册 -> 接口注册失败Error 1062 (23000): Duplicate entry '12' for key 'interface_models.interface_name'
+[gin_project] [2024-02-05 18:27:44] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:69 接口注册 -> 接口注册失败Error 1062 (23000): Duplicate entry '12' for key 'interface_models.interface_name'
+[gin_project] [2024-02-05 18:30:33] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2024-02-05 18:30:38] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 18:30:40] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceAddView interface_add.go:69 接口注册 -> 接口注册失败Error 1062 (23000): Duplicate entry '12' for key 'interface_models.interface_name'
+[gin_project] [2024-02-05 18:31:04] [32m[info][0m server/flag.Makemigrations db.go:44 Makemigrations success
+[gin_project] [2024-02-05 18:31:06] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 18:56:02] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 18:58:10] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 18:59:17] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:01:11] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:02:09] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:03:20] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:08:29] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceUpdateView interface_update.go:47 InterfaceUpdateView -> 参数错误:Key: 'InterfaceUpdateRequest.ID' Error:Field validation for 'ID' failed on the 'required' tag
+[gin_project] [2024-02-05 19:08:29] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceUpdateView interface_update.go:47 InterfaceUpdateView -> 参数错误:Key: 'InterfaceUpdateRequest.ID' Error:Field validation for 'ID' failed on the 'required' tag
+[gin_project] [2024-02-05 19:08:45] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceUpdateView interface_update.go:47 InterfaceUpdateView -> 参数错误:Key: 'InterfaceUpdateRequest.ID' Error:Field validation for 'ID' failed on the 'required' tag
+[gin_project] [2024-02-05 19:32:27] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-05 19:32:27] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:24 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-05 19:33:51] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-05 19:33:51] [31m[error][0m server/middleware.JwtAuth jwt_auth.go:24 UserListView -> token解析失败token has invalid claims: token is expired
+[gin_project] [2024-02-05 19:33:54] [31m[error][0m server/utils/jwts.ParseToken token.go:46 token parse err: token has invalid claims: token is expired
+[gin_project] [2024-02-05 19:34:00] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceUpdateView interface_update.go:47 InterfaceUpdateView -> 参数错误:Key: 'InterfaceUpdateRequest.ID' Error:Field validation for 'ID' failed on the 'required' tag
+[gin_project] [2024-02-05 19:35:51] [33m[warning][0m server/api/interface_api.InterfaceApi.InterfaceUpdateView interface_update.go:47 InterfaceUpdateView -> 参数错误:Key: 'InterfaceUpdateRequest.ID' Error:Field validation for 'ID' failed on the 'required' tag
+[gin_project] [2024-02-05 19:36:55] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:37:25] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:54:02] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:54:50] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190
+[gin_project] [2024-02-05 19:54:53] [32m[info][0m main.main main.go:34 server run addr:0.0.0.0:9190

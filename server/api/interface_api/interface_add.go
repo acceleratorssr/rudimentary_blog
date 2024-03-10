@@ -5,17 +5,18 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
+	"server/utils/jwts"
 )
 
 type InterfaceAddRequest struct {
 	InterfaceName  string `json:"interface_name" binding:"required" msg:"缺少接口名"`
-	UserId         uint   `json:"user_id" binding:"required" msg:"缺少创建人ID"`
+	UserId         uint   `json:"user_id"`
 	Description    string `json:"description" `
 	Url            string `json:"url" binding:"required,url" msg:"接口url有误"`
 	Method         string `json:"method" binding:"required" msg:"缺少接口方法"`
 	RequestHeader  string `json:"request_header"`
 	ResponseHeader string `json:"response_header"`
-	Status         uint   `json:"status"`
+	Status         string `json:"status"`
 }
 
 // InterfaceAddView 添加接口
@@ -34,10 +35,15 @@ func (InterfaceApi) InterfaceAddView(c *gin.Context) {
 
 	err := c.ShouldBindJSON(&IAR)
 	if err != nil {
-		global.Log.Warnln("创建接口失败 UserRegisterView -> ", err)
+		global.Log.Warnln("创建接口失败 InterfaceAddView -> ", err)
 		res.FailWithError(err, InterfaceAddRequest{}, c)
 		return
 	}
+
+	_permission, _ := c.Get("parseToken")
+
+	// 注意_permission的类型是 *jwts.Permission
+	permission := _permission.(*jwts.CustomClaims)
 
 	// 注册接口到mysql，获取id
 	err = global.DB.Take(&interfaceModel, "url = ?", IAR.Url).Error
@@ -48,7 +54,7 @@ func (InterfaceApi) InterfaceAddView(c *gin.Context) {
 	}
 
 	interfaceApi := models.InterfaceModels{
-		UserId:         IAR.UserId,
+		UserId:         permission.UserID,
 		InterfaceName:  IAR.InterfaceName,
 		Description:    IAR.Description,
 		Url:            IAR.Url,

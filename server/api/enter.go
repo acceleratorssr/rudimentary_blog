@@ -1,6 +1,7 @@
 package api
 
 import (
+	"server/api/controller_api"
 	"server/api/images_api"
 	"server/api/interface_api"
 	"server/api/jumpTarget_api"
@@ -18,6 +19,7 @@ type Group struct {
 	UserApi       user_api.UserApi
 	MessageApi    message_api.MessageApi
 	InterfaceApi  interface_api.InterfaceApi
+	ControllerApi controller_api.ControllerApi
 }
 
 var Groups = new(Group)

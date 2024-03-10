@@ -29,7 +29,7 @@ definitions:
       response_header:
         type: string
       status:
-        type: integer
+        type: string
       url:
         type: string
       user_id:
@@ -38,7 +38,27 @@ definitions:
     - interface_name
     - method
     - url
-    - user_id
+    type: object
+  interface_api.InterfaceUpdateRequest:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      interface_name:
+        type: string
+      method:
+        type: string
+      request_header:
+        type: string
+      response_header:
+        type: string
+      status:
+        type: string
+      url:
+        type: string
+    required:
+    - id
     type: object
   jumpTarget_api.JumpTargetRequest:
     properties:
@@ -199,7 +219,7 @@ definitions:
         type: string
       status:
         description: 接口状态，0上线，1下线
-        type: integer
+        type: string
       updated_at:
         type: string
       url:
@@ -522,6 +542,50 @@ paths:
           schema:
             $ref: '#/definitions/res.Response'
       summary: 接口列表
+      tags:
+      - 接口
+  /api/interface_remove:
+    post:
+      consumes:
+      - application/json
+      description: 接口删除视图
+      parameters:
+      - description: 接口ID列表
+        in: body
+        name: id_list
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功删除%d个接口
+          schema:
+            type: string
+      summary: 接口删除
+      tags:
+      - 接口
+  /api/interface_update:
+    post:
+      consumes:
+      - application/json
+      description: 接口更新视图
+      parameters:
+      - description: 用户ID，可改接口名称、描述、url、请求方法、请求头、响应头、接口状态
+        in: body
+        name: InterfaceUpdateRequest
+        required: true
+        schema:
+          $ref: '#/definitions/interface_api.InterfaceUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 修改成功
+          schema:
+            type: string
+      summary: 管理员更新接口信息
       tags:
       - 接口
   /api/jumpTarget:
