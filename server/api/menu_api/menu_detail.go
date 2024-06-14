@@ -8,7 +8,7 @@ import (
 	"server/models/res"
 )
 
-// MenuDetailView 菜单详情视图
+// MenuDetail 菜单详情视图
 //
 // @Summary 获取菜单详情
 // @Description 通过ID获取菜单详情
@@ -18,7 +18,7 @@ import (
 // @Param id path int true "菜单ID"
 // @Success 200 {object} MenuResponse "成功响应"
 // @Router /api/menuDetail/{id} [get]
-func (MenuApi) MenuDetailView(c *gin.Context) {
+func (MenuApi) MenuDetail(c *gin.Context) {
 	id := c.Param("id")
 	fmt.Println(id)
 	var menu models.MenuModels

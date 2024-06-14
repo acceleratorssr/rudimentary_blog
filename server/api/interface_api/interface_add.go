@@ -5,7 +5,7 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
-	"server/utils/jwts"
+	"server/pkg/utils/jwts"
 )
 
 type InterfaceAddRequest struct {
@@ -19,7 +19,7 @@ type InterfaceAddRequest struct {
 	Status         string `json:"status"`
 }
 
-// InterfaceAddView 添加接口
+// InterfaceAdd 添加接口
 //
 // @Tags 接口
 // @Summary  添加接口
@@ -29,13 +29,13 @@ type InterfaceAddRequest struct {
 // @Router /api/interface_add [post]
 // @Produce json
 // @Success 200 {object} models.InterfaceModels
-func (InterfaceApi) InterfaceAddView(c *gin.Context) {
+func (InterfaceApi) InterfaceAdd(c *gin.Context) {
 	var IAR InterfaceAddRequest
 	var interfaceModel models.InterfaceModels
 
 	err := c.ShouldBindJSON(&IAR)
 	if err != nil {
-		global.Log.Warnln("创建接口失败 InterfaceAddView -> ", err)
+		global.Log.Warnln("创建接口失败 InterfaceAdd -> ", err)
 		res.FailWithError(err, InterfaceAddRequest{}, c)
 		return
 	}

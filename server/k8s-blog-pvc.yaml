@@ -1,0 +1,14 @@
+apiVersion: v1
+# 用户对存储资源的请求。它是对 PV 的抽象，通过 PVC，用户请求特定的存储容量和访问模式
+# 用途：为 Pod 提供持久化存储。当 PVC 被创建时，Kubernetes 会找到一个匹配的 PV 并绑定
+kind: PersistentVolumeClaim
+metadata:
+  name: blog-mysql-pvc
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce # 说明当前PVC 需要一个pv：允许一个pod以 读写模式 挂载
+  resources:
+    requests:
+      storage: 1Gi # 请求的存储资源，如果没有匹配的 PV，则创建 PVC 失败，进入pending；（或者动态配置kv）
+                

@@ -12,7 +12,7 @@ type removeRequest struct {
 	ID uint `json:"id"`
 }
 
-// InterfaceRemoveView 是一个API视图，用于处理用户删除的请求
+// InterfaceRemove 是一个API视图，用于处理用户删除的请求
 //
 // @Summary 接口删除
 // @Description 接口删除视图
@@ -22,7 +22,7 @@ type removeRequest struct {
 // @Param id_list body object true "接口ID列表"
 // @Success 200 {string} string "成功删除%d个接口"
 // @Router /api/interface_remove [post]
-func (InterfaceApi) InterfaceRemoveView(c *gin.Context) {
+func (InterfaceApi) InterfaceRemove(c *gin.Context) {
 	// TODO:删除用户时，注意用户关联的数据也需要删除
 	var RQ removeRequest
 	err := c.ShouldBindJSON(&RQ)

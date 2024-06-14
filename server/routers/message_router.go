@@ -2,7 +2,7 @@ package routers
 
 import (
 	"server/api"
-	"server/middleware"
+	"server/pkg/middleware"
 )
 
 func (RG RouterGroup) MessageRouter() {

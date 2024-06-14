@@ -6,11 +6,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"server/global"
 	"server/models/res"
-	"server/utils/jwts"
+	"server/pkg/utils/jwts"
 	"time"
 )
 
-// OfflineView 是一个API视图，用于处理用户下线的请求
+// Offline 是一个API视图，用于处理用户下线的请求
 //
 // @Summary 用户下线
 // @Description 用户下线视图，直接将当前用户的token注销
@@ -19,7 +19,7 @@ import (
 // @Produce json
 // @Success 200 {string} string "success offline"
 // @Router /api/user_offline [post]
-func (UserApi) OfflineView(c *gin.Context) {
+func (UserApi) Offline(c *gin.Context) {
 	ctx := context.Background()
 	_permission, _ := c.Get("parseToken")
 	permission := _permission.(*jwts.CustomClaims)

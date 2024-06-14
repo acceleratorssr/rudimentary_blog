@@ -5,8 +5,8 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
-	"server/utils/jwts"
-	"server/utils/pwd"
+	"server/pkg/utils/jwts"
+	"server/pkg/utils/pwd"
 )
 
 type UsernameLoginRequest struct {
@@ -14,7 +14,7 @@ type UsernameLoginRequest struct {
 	Password string `json:"password" binding:"required" msg:"缺少密码"`
 }
 
-// UsernameLoginView 用户登录
+// UsernameLogin 用户登录
 // @Summary 用户名登录视图
 // @Description 使用用户名和密码进行登录，成功后返回token
 // @Tags 用户
@@ -23,7 +23,7 @@ type UsernameLoginRequest struct {
 // @Param ULR body UsernameLoginRequest true "登录请求"
 // @Success 200 {object} models.UserModels "成功返回用户信息和token"
 // @Router /api/user_login [post]
-func (UserApi) UsernameLoginView(c *gin.Context) {
+func (UserApi) UsernameLogin(c *gin.Context) {
 	var ULR UsernameLoginRequest
 	err := c.ShouldBindJSON(&ULR)
 	if err != nil {

@@ -15,7 +15,7 @@ type SettingsUri struct {
 	Name string `uri:"name"`
 }
 
-// SettingsInfoView 是一个API视图，用于处理设置信息的请求
+// SettingsInfo 是一个API视图，用于处理设置信息的请求
 //
 // @Summary 获取配置信息
 // @Description 设置信息视图，需要具体配置名称。如果找不到该字段，将返回错误信息。
@@ -25,7 +25,7 @@ type SettingsUri struct {
 // @Param name path string true "获取配置名称"
 // @Success 200 {string} string "success"
 // @Router /settings/{name} [get]
-func (s SettingsApi) SettingsInfoView(c *gin.Context) {
+func (s SettingsApi) SettingsInfo(c *gin.Context) {
 	//var cs string
 	//// 获取 URI 参数 ":name"
 	//cs = c.Param("name")
@@ -81,7 +81,7 @@ func (s SettingsApi) SettingsInfoView(c *gin.Context) {
 		}
 	}
 	if !f {
-		res.FailWithMessage("not find this field -> SettingsInfoView", c)
+		res.FailWithMessage("not find this field -> SettingsInfo", c)
 	} else {
 		res.OK(c)
 	}

@@ -5,7 +5,7 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
-	"server/utils/jwts"
+	"server/pkg/utils/jwts"
 )
 
 // MessageRequest 目前仅支持发送

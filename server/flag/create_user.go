@@ -7,7 +7,7 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/stype"
-	"server/utils/pwd"
+	"server/pkg/utils/pwd"
 )
 
 func CreateUser(permission string) {

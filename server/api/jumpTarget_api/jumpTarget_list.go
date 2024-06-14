@@ -4,11 +4,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"server/models"
 	"server/models/res"
-	"server/service/common"
+	"server/pkg/common"
 	"strings"
 )
 
-// JumpTargetListView 查询跳转的目标
+// JumpTargetList 查询跳转的目标
 //
 // @Tags 跳转的目标
 // @Summary  查询跳转目标
@@ -18,7 +18,7 @@ import (
 // @Router /api/jumpTarget [get]
 // @Produce json
 // @Success 200 {object} res.Response
-func (JumpTargetApi) JumpTargetListView(c *gin.Context) {
+func (JumpTargetApi) JumpTargetList(c *gin.Context) {
 	var jt models.Page
 	var jumpTargetList []models.JumpTargetModels
 	err := c.ShouldBindQuery(&jt)

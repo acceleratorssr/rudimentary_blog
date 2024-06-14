@@ -29,7 +29,7 @@ func isOnly(only []string, n string) bool {
 	return false
 }
 
-// InterfaceUpdateView 是一个API视图，用于处理更新接口的请求
+// InterfaceUpdate 是一个API视图，用于处理更新接口的请求
 //
 // @Summary 管理员更新接口信息
 // @Description 接口更新视图
@@ -39,20 +39,20 @@ func isOnly(only []string, n string) bool {
 // @Param InterfaceUpdateRequest body InterfaceUpdateRequest true "用户ID，可改接口名称、描述、url、请求方法、请求头、响应头、接口状态"
 // @Success 200 {string} string "修改成功"
 // @Router /api/interface_update [post]
-func (InterfaceApi) InterfaceUpdateView(c *gin.Context) {
+func (InterfaceApi) InterfaceUpdate(c *gin.Context) {
 	onlyOne := []string{"Url"}
 	var IUR InterfaceUpdateRequest
 	err := c.ShouldBindJSON(&IUR)
 	if err != nil {
-		global.Log.Warn("InterfaceUpdateView -> 参数错误:", err)
-		res.FailWithMessage("InterfaceUpdateView -> 参数错误", c)
+		global.Log.Warn("InterfaceUpdate -> 参数错误:", err)
+		res.FailWithMessage("InterfaceUpdate -> 参数错误", c)
 		return
 	}
 
 	var interfaces models.InterfaceModels
 	err = global.DB.Take(&interfaces, "url = ?", IUR.Url).Error
 	if err != nil {
-		res.FailWithMessage("UserUpdateView -> 接口不存在", c)
+		res.FailWithMessage("UserUpdate -> 接口不存在", c)
 		return
 	}
 
@@ -73,27 +73,27 @@ func (InterfaceApi) InterfaceUpdateView(c *gin.Context) {
 				global.DB.Where(iurType.Field(i).Name+" = ?", f.Interface()).First(&u)
 				// 若存在且ID与传入的interfaces.ID不同且不为0，则输出日志并返回错误信息
 				if u.ID != interfaces.ID && u.ID != 0 {
-					global.Log.Warn("InterfaceUpdateView -> url重复:", iurType.Field(i).Name)
-					res.FailWithMessage("InterfaceUpdateView -> url重复", c)
+					global.Log.Warn("InterfaceUpdate -> url重复:", iurType.Field(i).Name)
+					res.FailWithMessage("InterfaceUpdate -> url重复", c)
 					return
 				}
 				// 若不存在冲突记录，则尝试更新数据库中的对应字段值
 				err = global.DB.Model(&interfaces).Update(iurType.Field(i).Name, f.Interface()).Error
 				if err != nil {
-					global.Log.Warn("InterfaceUpdateView -> 修改失败:", err)
-					res.FailWithMessage("InterfaceUpdateView -> 修改失败", c)
+					global.Log.Warn("InterfaceUpdate -> 修改失败:", err)
+					res.FailWithMessage("InterfaceUpdate -> 修改失败", c)
 					return
 				}
 			} else {
 				err = global.DB.Model(&interfaces).Update(iurType.Field(i).Name, f.Interface()).Error
 				if err != nil {
-					global.Log.Warn("InterfaceUpdateView -> 修改失败:", err)
-					res.FailWithMessage("InterfaceUpdateView -> 修改失败", c)
+					global.Log.Warn("InterfaceUpdate -> 修改失败:", err)
+					res.FailWithMessage("InterfaceUpdate -> 修改失败", c)
 					return
 				}
 			}
 		}
 	}
 
-	res.OKWithAll(IUR, "UserUpdateView -> 修改成功:", c)
+	res.OKWithAll(IUR, "UserUpdate -> 修改成功:", c)
 }

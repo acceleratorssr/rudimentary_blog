@@ -7,10 +7,10 @@ import (
 	"server/models"
 	"server/models/res"
 	"server/models/stype"
-	"server/utils/jwts"
+	"server/pkg/utils/jwts"
 )
 
-// UserGetLoginView 返回当前已登录用户信息
+// UserGetLogin 返回当前已登录用户信息
 //
 // @Tags 用户
 // @Summary  当前用户信息
@@ -19,7 +19,7 @@ import (
 // @Router /api/user_get_login [get]
 // @Produce json
 // @Success 200 {object} res.Response
-func (UserApi) UserGetLoginView(c *gin.Context) {
+func (UserApi) UserGetLogin(c *gin.Context) {
 	token := c.Request.Header.Get("token")
 	ctx := context.Background()
 

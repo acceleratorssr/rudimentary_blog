@@ -14,7 +14,7 @@ type JumpTargetRequest struct {
 	IsShow         bool   `json:"is_show"`
 }
 
-// JumpTargetCreateView 添加跳转的目标
+// JumpTargetCreate 添加跳转的目标
 //
 // @Tags 跳转的目标
 // @Summary  添加跳转目标
@@ -24,7 +24,7 @@ type JumpTargetRequest struct {
 // @Router /api/jumpTarget [post]
 // @Produce json
 // @Success 200 {object} res.Response{}
-func (JumpTargetApi) JumpTargetCreateView(c *gin.Context) {
+func (JumpTargetApi) JumpTargetCreate(c *gin.Context) {
 	var jtr JumpTargetRequest
 	err := c.ShouldBindJSON(&jtr)
 	if err != nil {

@@ -13,7 +13,7 @@ type NameListResponse struct {
 	Path      string `json:"path"`
 }
 
-// MenuNameListView 菜单名称列表视图
+// MenuNameList 菜单名称列表视图
 //
 // @Summary 获取菜单名称列表
 // @Description 获取所有菜单的名称列表
@@ -22,7 +22,7 @@ type NameListResponse struct {
 // @Produce json
 // @Success 200 {array} NameListResponse "成功响应"
 // @Router /api/menuName [get]
-func (MenuApi) MenuNameListView(c *gin.Context) {
+func (MenuApi) MenuNameList(c *gin.Context) {
 	var menuNameList []NameListResponse
 
 	err := global.DB.Model(models.MenuModels{}).Select("id", "menu_title", "path").Find(&menuNameList).Error

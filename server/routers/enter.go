@@ -17,15 +17,25 @@ func InitRouters() *gin.Engine {
 	gin.SetMode(global.Config.System.Env)
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
-		c.String(200, "Welcome to the world of GoFrame!")
+		c.JSON(200, gin.H{
+			"message": "successful",
+		})
 	})
 
 	config := cors.DefaultConfig()
 	//config.AllowAllOrigins = true	//全允许
-	config.AllowOrigins = []string{"http://localhost:8000", "http://127.0.0.1"}                          // 只允许 "http://127.0.0.1" 这个域名的请求
+	config.AllowOrigins = []string{"http://localhost:8000", "http://127.0.0.1"} // 只允许 "http://127.0.0.1" 这个域名的请求
+	// origin为请求来源
+	//config.AllowOriginFunc = func(origin string) bool {
+	//	if strings.HasPrefix(origin, "http://localhost") {
+	//		return true
+	//	}
+	//	return strings.Contains(origin, "http://localhost")
+	//}
 	config.AllowMethods = []string{"GET", "POST", "DELETE", "PUT", "OPTIONS"}                            // 允许的请求方法
 	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "authorization", "token"} // 允许的请求头
 	//config.AllowCredentials = true                                              // 允许接收和发送cookies
+	//config.ExposeHeaders = []string{" token"} // 暴露自定义的响应头给客户端
 	r.Use(cors.New(config))
 
 	// *any是一个通配符，表示可以匹配/swagger/后的任何内容

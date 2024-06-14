@@ -1,12 +1,12 @@
 package menu_api
 
 import (
-	myutils "github.com/acceleratorssr/My_go_utils"
 	"github.com/gin-gonic/gin"
 	"server/global"
 	"server/models"
 	"server/models/res"
 	"server/models/stype"
+	"server/pkg/utils"
 	"strings"
 )
 
@@ -27,7 +27,7 @@ type MenuUpdateRequest struct {
 	FieldBanList string `json:"field_ban_list"`
 }
 
-// MenuUpdateView 更新菜单
+// MenuUpdate 更新菜单
 //
 // @Tags 菜单
 // @Summary  更新菜单
@@ -38,7 +38,7 @@ type MenuUpdateRequest struct {
 // @Router /api/menu [put]
 // @Produce json
 // @Success 200 {object} res.Response
-func (MenuApi) MenuUpdateView(c *gin.Context) {
+func (MenuApi) MenuUpdate(c *gin.Context) {
 	var MR MenuUpdateRequest
 	var menu models.MenuModels
 	err := c.ShouldBindJSON(&MR)
@@ -62,7 +62,7 @@ func (MenuApi) MenuUpdateView(c *gin.Context) {
 	//fieldBanList := "MenuTitleEnPathMenuIconMenuTimeAbstractParentIdSortImageSort"
 	// 如果不更新图片 -> 不更新连接表
 	if strings.Contains(MR.FieldBanList, "ImageSort") {
-		err = global.DB.Model(&menu).Updates(myutils.StructToMap(MR.Son, MR.FieldBanList)).Error
+		err = global.DB.Model(&menu).Updates(utils.Struct2Map(MR.Son, nil)).Error
 	} else {
 		err = global.DB.Model(&menu).Association("MenuImages").Clear()
 		if err != nil {
@@ -88,7 +88,17 @@ func (MenuApi) MenuUpdateView(c *gin.Context) {
 			}
 		}
 
-		err = global.DB.Model(&menu).Updates(myutils.StructToMap(MR.Son, MR.FieldBanList+"ImageSort")).Error
+		need := []string{"MenuTitle",
+			"MenuTitleEn",
+			"Path",
+			"MenuIcon",
+			"MenuTime",
+			"Abstract",
+			"ParentId",
+			"Sort",
+		}
+
+		err = global.DB.Model(&menu).Updates(utils.Struct2Map(MR.Son, need)).Error
 	}
 	if err != nil {
 		global.Log.Error(err)

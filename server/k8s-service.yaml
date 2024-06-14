@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog
+spec:
+  selector:
+    app: blog
+  ports:
+    - protocol: TCP
+      name: http
+      port: 8888
+      targetPort: 9190
+  type: LoadBalancer # 换成ClusterIP，就可以让流量一定从nginx流过来
+  

@@ -6,7 +6,7 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
-	"server/utils/jwts"
+	"server/pkg/utils/jwts"
 )
 
 type UserSelf struct {
@@ -15,7 +15,7 @@ type UserSelf struct {
 	PhoneNum string `json:"phone_num"`
 }
 
-// UserSelfUpdateView 是一个API视图，用于处理用户自我更新的请求
+// UserSelfUpdate 是一个API视图，用于处理用户自我更新的请求
 //
 // @Summary 用户自我更新
 // @Description 用户自我更新视图，可以更改昵称、头像和手机号码。
@@ -25,14 +25,14 @@ type UserSelf struct {
 // @Param UserSelf body UserSelf true "可改昵称，头像，手机号"
 // @Success 200 {string} string "修改成功"
 // @Router /api/user_self_update [put]
-func (UserApi) UserSelfUpdateView(c *gin.Context) {
+func (UserApi) UserSelfUpdate(c *gin.Context) {
 	var user models.UserModels
 	var USUp UserSelf
 
 	err := c.ShouldBindJSON(&USUp)
 	if err != nil {
-		global.Log.Warn("UserSelfUpdateView -> 参数错误:", err)
-		res.FailWithMessage("UserSelfUpdateView -> 参数错误", c)
+		global.Log.Warn("UserSelfUpdate -> 参数错误:", err)
+		res.FailWithMessage("UserSelfUpdate -> 参数错误", c)
 		return
 	}
 
@@ -44,8 +44,8 @@ func (UserApi) UserSelfUpdateView(c *gin.Context) {
 	// 获取当前登录的用户信息
 	err = global.DB.First(&user, "id = ?", permission.UserID).Error
 	if err != nil {
-		global.Log.Warn("UserSelfUpdateView -> 未找到对应用户:", err)
-		res.FailWithMessage("UserSelfUpdateView -> 未找到对应用户，请检查用户id", c)
+		global.Log.Warn("UserSelfUpdate -> 未找到对应用户:", err)
+		res.FailWithMessage("UserSelfUpdate -> 未找到对应用户，请检查用户id", c)
 		return
 	}
 
@@ -62,8 +62,8 @@ func (UserApi) UserSelfUpdateView(c *gin.Context) {
 		if !f.IsZero() {
 			err = global.DB.Model(&user).Update(uupType.Field(i).Name, f.Interface()).Error
 			if err != nil {
-				global.Log.Warn("UserUpdateView -> 修改失败:", err)
-				res.FailWithMessage("UserUpdateView -> 修改失败", c)
+				global.Log.Warn("UserUpdate -> 修改失败:", err)
+				res.FailWithMessage("UserUpdate -> 修改失败", c)
 				return
 			}
 		}

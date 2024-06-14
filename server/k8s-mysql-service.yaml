@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog-mysql # 服务的名称
+spec:
+  selector: # 指定服务要管理的pod
+    app: blog-mysql # 指定的pod的标签
+  ports:
+    - protocol: TCP
+      port: 13306 # 服务端口
+      targetPort: 3306 # pod端口（内部给mysql的）
+  type: LoadBalancer
+  

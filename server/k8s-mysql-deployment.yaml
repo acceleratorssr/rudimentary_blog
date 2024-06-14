@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment #类型为deployment，管理一组pod
+metadata:
+  name: blog-mysql # Deployment的名称
+  labels: # Deployment的标签
+    app: blog-mysql
+spec:
+  replicas: 1 # 运行的副本/pod数量
+  selector:
+    matchLabels:
+      app: blog-mysql # 指定 Deployment 应该管理哪些 Pod
+  template: # pod模板
+    metadata:
+      name: blog-mysql # pod的名称
+      labels:
+        app: blog-mysql # pod的标签
+    spec: # pod的配置
+      containers: # pod的容器列表（以数组的方式呈现）
+        - name: blog-mysql # 容器的名称
+          image: mysql:latest
+          imagePullPolicy: IfNotPresent # 如果容器镜像不在本地，则从远程仓库拉取
+          # 指定使用哪个持久化卷
+          volumeMounts:
+            - mountPath: /var/lib/mysql # 将卷挂载到容器内的 /var/lib/mysql 目录，是mysql存储数据的默认目录
+              name: mysql-data # 使用名称为 mysql-data 的卷
+          ports:
+            - containerPort: 3306 # 容器端口（对内）
+          env: # 环境变量
+            - name: MYSQL_ROOT_PASSWORD
+              value: 20031214pzw!
+      restartPolicy: Always # 容器遇到错误时，pod的重启策略，此时会一直重启
+      volumes: # 定义了pod使用的卷
+        - name: mysql-data # 卷名称
+          persistentVolumeClaim:
+            claimName: blog-mysql-pvc

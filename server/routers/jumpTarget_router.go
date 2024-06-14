@@ -6,8 +6,8 @@ import (
 
 func (RG RouterGroup) JumpTargetRouter() {
 	jumpTargetApi := api.Groups.JumpTargetApi
-	RG.Router.GET("/jumpTarget", jumpTargetApi.JumpTargetListView)
-	RG.Router.POST("/jumpTarget", jumpTargetApi.JumpTargetCreateView)
-	RG.Router.PUT("/jumpTarget/:id", jumpTargetApi.JumpTargetUpdateView)
-	RG.Router.DELETE("/jumpTarget", jumpTargetApi.JumpTargetRemoveView)
+	RG.Router.GET("/jumpTarget", jumpTargetApi.JumpTargetList)
+	RG.Router.POST("/jumpTarget", jumpTargetApi.JumpTargetCreate)
+	RG.Router.PUT("/jumpTarget/:id", jumpTargetApi.JumpTargetUpdate)
+	RG.Router.DELETE("/jumpTarget", jumpTargetApi.JumpTargetRemove)
 }

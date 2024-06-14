@@ -1,7 +1,5 @@
 github.com/KyleBanks/depth v1.2.1 h1:5h8fQADFrWtarTdtDudMmGsC7GPbOAu6RVB3ffsVFHc=
 github.com/KyleBanks/depth v1.2.1/go.mod h1:jzSb9d0L43HxTQfT+oSA1EEp2q+ne2uh6XgeJcm8brE=
-github.com/acceleratorssr/My_go_utils v0.0.0-20231213142536-3086f4c5f4a2 h1:MCkFMZ1571loKRdl9lmBralplrQQYdbuxKse8GQBeUE=
-github.com/acceleratorssr/My_go_utils v0.0.0-20231213142536-3086f4c5f4a2/go.mod h1:pAP5B0uX/zD+M503KoYBaxns3DghjV0USceVG+Da7F4=
 github.com/bsm/ginkgo/v2 v2.12.0 h1:Ny8MWAHyOepLGlLKYmXG4IEkioBysk6GpaRTLC8zwWs=
 github.com/bsm/ginkgo/v2 v2.12.0/go.mod h1:SwYbGRRDovPVboqFv0tPTcG1sN61LM1Z4ARdbAV9g4c=
 github.com/bsm/gomega v1.27.10 h1:yeMWxP2pV2fG3FgAODIY8EiRE3dy0aeFYt4l7wh6yKA=

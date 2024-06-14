@@ -8,7 +8,7 @@ import (
 	"server/models/res"
 )
 
-// ImageRemoveView 删除文件
+// ImageRemove 删除文件
 //
 // @Tags 图片
 // @Summary  删除对应的文件
@@ -18,7 +18,7 @@ import (
 // @Router /api/images [delete]
 // @Produce json
 // @Success 200 {object} res.Response
-func (ImagesApi) ImageRemoveView(c *gin.Context) {
+func (ImagesApi) ImageRemove(c *gin.Context) {
 	var RQ models.RemoveRequest
 	err := c.ShouldBindJSON(&RQ)
 	if err != nil {

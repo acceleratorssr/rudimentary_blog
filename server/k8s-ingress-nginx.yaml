@@ -1,0 +1,18 @@
+# fail
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: blog
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: blog.pzw.com
+      http:
+        paths:
+          - path: / # 请求路径前缀匹配/时，将流量转发到后端对应端口
+            pathType: Prefix
+            backend:
+              service:
+                name: blog
+                port:
+                  number: 8888

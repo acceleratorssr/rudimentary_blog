@@ -1,14 +1,14 @@
 package jumpTarget_api
 
 import (
-	myutils "github.com/acceleratorssr/My_go_utils"
 	"github.com/gin-gonic/gin"
 	"server/global"
 	"server/models"
 	"server/models/res"
+	"server/pkg/utils"
 )
 
-// JumpTargetUpdateView 更新跳转的目标
+// JumpTargetUpdate 更新跳转的目标
 //
 // @Tags 跳转的目标
 // @Summary  更新跳转目标
@@ -18,7 +18,7 @@ import (
 // @Router /api/jumpTarget [put]
 // @Produce json
 // @Success 200 {object} res.Response
-func (JumpTargetApi) JumpTargetUpdateView(c *gin.Context) {
+func (JumpTargetApi) JumpTargetUpdate(c *gin.Context) {
 	var jTR JumpTargetRequest
 	err := c.ShouldBindJSON(&jTR)
 	if err != nil {
@@ -34,8 +34,8 @@ func (JumpTargetApi) JumpTargetUpdateView(c *gin.Context) {
 		return
 	}
 
-	// 不用传&，第二个参数为不需要转换的字段名，多个字段则直接连着写
-	err = global.DB.Model(&jt).Updates(myutils.StructToMap(jTR, "")).Error
+	// 不用传&，第二个参数为需要转换的字段名，为空默认为全都要
+	err = global.DB.Model(&jt).Updates(utils.Struct2Map(jTR, nil)).Error
 
 	if err != nil {
 		global.Log.Error(err)

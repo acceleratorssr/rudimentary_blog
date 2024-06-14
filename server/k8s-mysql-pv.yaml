@@ -1,0 +1,17 @@
+apiVersion: v1
+# 是集群管理员创建的存储资源。它是集群的一部分
+# 独立于具体的 Pod 和 Namespace
+# PV 是对实际存储（如物理存储、云存储等）的抽象
+kind: PersistentVolume # k8s有持久化卷的概念，用来存储数据
+metadata:
+  name: blog-mysql-pv # 持久化卷的名称
+spec:
+  storageClassName: standard # 持久化卷的存储类型
+  accessModes:
+    - ReadWriteOnce  # 卷可以被单个pod以 读写模式 挂载
+    #- ReadOnlyMany  # 卷可以被多个pod以 只读模式 挂载
+    #- ReadWriteMany # 卷可以被多个pod以 读写模式 挂载
+  capacity:
+    storage: 1Gi
+  hostPath: # 持久化卷的存储位置
+    path: "/mnt/blog" # 存储在节点的指定路径下

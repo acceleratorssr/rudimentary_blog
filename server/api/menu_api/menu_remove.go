@@ -9,7 +9,7 @@ import (
 	"server/models/res"
 )
 
-// MenuRemoveView 删除菜单
+// MenuRemove 删除菜单
 //
 // @Tags 菜单
 // @Summary  删除菜单
@@ -19,7 +19,7 @@ import (
 // @Router /api/menu [delete]
 // @Produce json
 // @Success 200 {object} res.Response
-func (MenuApi) MenuRemoveView(c *gin.Context) {
+func (MenuApi) MenuRemove(c *gin.Context) {
 	var RQ models.RemoveRequest
 	err := c.ShouldBindJSON(&RQ)
 	if err != nil {

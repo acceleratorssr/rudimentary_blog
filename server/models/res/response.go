@@ -3,7 +3,7 @@ package res
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"server/utils"
+	"server/pkg/utils"
 )
 
 const error_ = 9

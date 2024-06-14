@@ -4,10 +4,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"server/models"
 	"server/models/res"
-	"server/service/common"
+	"server/pkg/common"
 )
 
-// InterfaceListView 查询接口列表
+// InterfaceList 查询接口列表
 //
 // @Tags 接口
 // @Summary  接口列表
@@ -17,7 +17,7 @@ import (
 // @Router /api/interface_list [get]
 // @Produce json
 // @Success 200 {object} res.Response
-func (InterfaceApi) InterfaceListView(c *gin.Context) {
+func (InterfaceApi) InterfaceList(c *gin.Context) {
 	var page models.Page
 	var interfaceList []models.InterfaceModels
 	err := c.ShouldBindQuery(&page)

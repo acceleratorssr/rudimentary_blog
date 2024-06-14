@@ -3,7 +3,6 @@ module server
 go 1.21.3
 
 require (
-	github.com/acceleratorssr/My_go_utils v0.0.0-20231213142536-3086f4c5f4a2
 	github.com/elastic/go-elasticsearch/v8 v8.12.1
 	github.com/gin-contrib/cors v1.5.0
 	github.com/gin-gonic/gin v1.9.1

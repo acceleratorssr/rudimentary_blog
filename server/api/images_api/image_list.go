@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"server/models"
 	"server/models/res"
-	"server/service/common"
+	"server/pkg/common"
 )
 
 type ImageModelForSwagger struct {
@@ -15,7 +15,7 @@ type ImageModelForSwagger struct {
 	// 不包含ImageMenus字段
 }
 
-// ImageListView
+// ImageList
 //
 // @Summary 获取图片列表
 // @Description 根据分页参数获取图片列表
@@ -26,7 +26,7 @@ type ImageModelForSwagger struct {
 // @Param limit query int true "每页数量"
 // @Success 200 {array} models.ImageModels
 // @Router /api/images [get]
-func (ImagesApi) ImageListView(c *gin.Context) {
+func (ImagesApi) ImageList(c *gin.Context) {
 	// 请求方法：
 	// http://127.0.0.1:9190/api/images?page=1&limit=2
 	var imageList []models.ImageModels

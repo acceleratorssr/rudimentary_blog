@@ -21,8 +21,8 @@ func main() {
 	// 初始化数据库
 	global.DB = core.Gorm()
 	global.Redis = core.Redis()
-	// 初始化es
-	global.Elasticsearch = core.ESInit()
+	//// 初始化es
+	//global.Elasticsearch = core.ESInit()
 
 	// 命令行参数绑定
 	option := flag.Parse()

@@ -5,8 +5,8 @@ import (
 	"server/models"
 	"server/models/res"
 	"server/models/stype"
-	"server/service/common"
-	"server/utils/jwts"
+	"server/pkg/common"
+	"server/pkg/utils/jwts"
 )
 
 type userResponse struct {
@@ -19,7 +19,7 @@ type userResponse struct {
 	//CollectsModels []ArticleModels `gorm:"many2many:user_collection;joinForeignKey:UserID;JoinReferences:ArticleID" json:"-"`
 }
 
-// UserListView 查询用户列表
+// UserList 查询用户列表
 //
 // @Tags 用户
 // @Summary  用户列表
@@ -29,7 +29,7 @@ type userResponse struct {
 // @Router /api/user_list [get]
 // @Produce json
 // @Success 200 {object} res.Response
-func (UserApi) UserListView(c *gin.Context) {
+func (UserApi) UserList(c *gin.Context) {
 	_permission, _ := c.Get("parseToken")
 
 	// 注意_permission的类型是 *jwts.Permission

@@ -17,7 +17,7 @@ type MenuResponse struct {
 	Images     []Image `json:"images"`
 }
 
-// MenuListView 菜单列表视图
+// MenuList 菜单列表视图
 //
 // @Summary 获取菜单列表
 // @Description 获取所有菜单的列表
@@ -26,7 +26,7 @@ type MenuResponse struct {
 // @Produce json
 // @Success 200 {array} MenuResponse "成功响应"
 // @Router /api/menu [get]
-func (MenuApi) MenuListView(c *gin.Context) {
+func (MenuApi) MenuList(c *gin.Context) {
 	var menuList []models.MenuModels
 	var menuIDList []uint
 	err := global.DB.Order("sort desc").Find(&menuList).Select("id").Scan(&menuIDList).Error

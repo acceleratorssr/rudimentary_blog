@@ -13,7 +13,7 @@ type NameListResponse struct {
 	Path string `json:"path"`
 }
 
-// ImageNameListView
+// ImageNameList
 //
 // @Summary 获取图片名字列表
 // @Description 返回所有图片名字
@@ -21,7 +21,7 @@ type NameListResponse struct {
 // @Produce json
 // @Success 200 {array} NameListResponse
 // @Router /api/imagesName [get]
-func (ImagesApi) ImageNameListView(c *gin.Context) {
+func (ImagesApi) ImageNameList(c *gin.Context) {
 	var imageNameList []NameListResponse
 
 	err := global.DB.Model(models.ImageModels{}).Select("id", "name", "path").Find(&imageNameList).Error

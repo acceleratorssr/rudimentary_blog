@@ -8,7 +8,7 @@ import (
 	"server/models/res"
 )
 
-// ImageUpdateView 更新文件名
+// ImageUpdate 更新文件名
 //
 // @Tags 图片
 // @Summary  更新对应的文件名
@@ -18,7 +18,7 @@ import (
 // @Router /api/images [put]
 // @Produce json
 // @Success 200 {object} res.Response
-func (ImagesApi) ImageUpdateView(c *gin.Context) {
+func (ImagesApi) ImageUpdate(c *gin.Context) {
 	var UR models.UpdateRequest
 	// UR设置了binding:"required"和对应报错msg
 	// res.FailWithError(err, UR, c)会输出字段中自定义msg

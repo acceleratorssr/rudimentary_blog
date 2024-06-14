@@ -25,7 +25,7 @@ type MenuRequest struct {
 	ImageSort   []ImageSort `json:"image_sort"`
 }
 
-// MenuCreateView 创建菜单视图
+// MenuCreate 创建菜单视图
 //
 // @Summary 创建菜单
 // @Description 创建菜单
@@ -35,7 +35,7 @@ type MenuRequest struct {
 // @Param menu body MenuRequest true "创建菜单请求体"
 // @Success 200 {object} MenuResponse "成功响应"
 // @Router /api/menu [post]
-func (MenuApi) MenuCreateView(c *gin.Context) {
+func (MenuApi) MenuCreate(c *gin.Context) {
 	var MR MenuRequest
 	err := c.ShouldBindJSON(&MR)
 	if err != nil {

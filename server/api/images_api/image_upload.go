@@ -13,7 +13,7 @@ import (
 	"server/global"
 	"server/models"
 	"server/models/res"
-	"server/utils"
+	utils2 "server/pkg/utils"
 	"strconv"
 	"strings"
 	"time"
@@ -32,7 +32,7 @@ type FileUploadResponse struct {
 	Msg      string `json:"msg"`
 }
 
-// ImageUploadView 上传图片
+// ImageUpload 上传图片
 //
 // @Summary 上传图片
 // @Description 上传图片到服务器，并在数据库中保存图片信息
@@ -42,7 +42,7 @@ type FileUploadResponse struct {
 // @Param image formData file true "图片文件"
 // @Success 200 {array} FileUploadResponse
 // @Router /image/upload [post]
-func (ImagesApi) ImageUploadView(c *gin.Context) {
+func (ImagesApi) ImageUpload(c *gin.Context) {
 	// 这里的image名字要对应form-data中的key
 	form, err := c.MultipartForm()
 	if err != nil {
@@ -98,7 +98,7 @@ func (ImagesApi) ImageUploadView(c *gin.Context) {
 		if err != nil {
 			return
 		}
-		imageHash := utils.Md5(bytes)
+		imageHash := utils2.Md5(bytes)
 		fmt.Println(imageHash)
 
 		// 在数据库中查看图片是否存在
@@ -176,5 +176,5 @@ func generateRandomString(length int) string {
 func isAllowedFile(fileName string, allowedList []string) bool {
 	fileExt := strings.ToLower(fileName[strings.LastIndex(fileName, "."):])
 	//也可以使用split取最后一块
-	return utils.InList(fileExt, allowedList)
+	return utils2.InList(fileExt, allowedList)
 }

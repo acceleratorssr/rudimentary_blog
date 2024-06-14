@@ -27,7 +27,7 @@ func isOnly(only []string, n string) bool {
 	return false
 }
 
-// UserUpdateView 是一个API视图，用于处理用户更新的请求
+// UserUpdate 是一个API视图，用于处理用户更新的请求
 //
 // @Summary 管理员可强制更新用户信息
 // @Description 用户更新视图，需要用户ID，可改权限、用户名、昵称和手机号码。用户名和手机号码需要唯一。
@@ -37,20 +37,20 @@ func isOnly(only []string, n string) bool {
 // @Param UserUpdate body UserUpdate true "用户ID，可改权限、用户名、昵称和手机号码"
 // @Success 200 {string} string "修改成功"
 // @Router /api/user_update [put]
-func (UserApi) UserUpdateView(c *gin.Context) {
+func (UserApi) UserUpdate(c *gin.Context) {
 	onlyOne := []string{"Username", "PhoneNum"}
 	var UUp UserUpdate
 	err := c.ShouldBindJSON(&UUp)
 	if err != nil {
-		global.Log.Warn("UserUpdateView -> 参数错误:", err)
-		res.FailWithMessage("UserUpdateView -> 参数错误", c)
+		global.Log.Warn("UserUpdate -> 参数错误:", err)
+		res.FailWithMessage("UserUpdate -> 参数错误", c)
 		return
 	}
 
 	var user models.UserModels
 	err = global.DB.Take(&user, UUp.ID).Error
 	if err != nil {
-		res.FailWithMessage("UserUpdateView -> 用户不存在", c)
+		res.FailWithMessage("UserUpdate -> 用户不存在", c)
 		return
 	}
 
@@ -68,21 +68,21 @@ func (UserApi) UserUpdateView(c *gin.Context) {
 				var u models.UserModels
 				global.DB.Where(uupType.Field(i).Name+" = ?", f.Interface()).First(&u)
 				if u.ID != user.ID && u.ID != 0 {
-					global.Log.Warn("UserUpdateView -> 手机号/用户名重复:", uupType.Field(i).Name)
-					res.FailWithMessage("UserUpdateView -> 手机号/用户名重复", c)
+					global.Log.Warn("UserUpdate -> 手机号/用户名重复:", uupType.Field(i).Name)
+					res.FailWithMessage("UserUpdate -> 手机号/用户名重复", c)
 					return
 				}
 				err = global.DB.Model(&user).Update(uupType.Field(i).Name, f.Interface()).Error
 				if err != nil {
-					global.Log.Warn("UserUpdateView -> 修改失败:", err)
-					res.FailWithMessage("UserUpdateView -> 修改失败", c)
+					global.Log.Warn("UserUpdate -> 修改失败:", err)
+					res.FailWithMessage("UserUpdate -> 修改失败", c)
 					return
 				}
 			} else {
 				err = global.DB.Model(&user).Update(uupType.Field(i).Name, f.Interface()).Error
 				if err != nil {
-					global.Log.Warn("UserUpdateView -> 修改失败:", err)
-					res.FailWithMessage("UserUpdateView -> 修改失败", c)
+					global.Log.Warn("UserUpdate -> 修改失败:", err)
+					res.FailWithMessage("UserUpdate -> 修改失败", c)
 					return
 				}
 			}
@@ -91,9 +91,9 @@ func (UserApi) UserUpdateView(c *gin.Context) {
 
 	//err = global.DB.Model(&user).Update("Permission", UUp.Permission).Error
 	//if err != nil {
-	//	global.Log.Error("UserUpdateView -> 修改权限失败:", err)
-	//	res.FailWithMessage("UserUpdateView -> 修改权限失败", c)
+	//	global.Log.Error("UserUpdate -> 修改权限失败:", err)
+	//	res.FailWithMessage("UserUpdate -> 修改权限失败", c)
 	//	return
 	//}
-	res.OKWithAll(UUp, "UserUpdateView -> 修改成功:", c)
+	res.OKWithAll(UUp, "UserUpdate -> 修改成功:", c)
 }

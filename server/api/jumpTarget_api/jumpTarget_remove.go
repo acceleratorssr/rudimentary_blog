@@ -8,7 +8,7 @@ import (
 	"server/models/res"
 )
 
-// JumpTargetRemoveView 删除跳转的目标
+// JumpTargetRemove 删除跳转的目标
 //
 // @Tags 跳转的目标
 // @Summary  删除跳转目标
@@ -18,7 +18,7 @@ import (
 // @Router /api/jumpTarget [delete]
 // @Produce json
 // @Success 200 {object} res.Response
-func (JumpTargetApi) JumpTargetRemoveView(c *gin.Context) {
+func (JumpTargetApi) JumpTargetRemove(c *gin.Context) {
 	var RQ models.RemoveRequest
 	err := c.ShouldBindJSON(&RQ)
 	if err != nil {
