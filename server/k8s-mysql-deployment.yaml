@@ -5,7 +5,7 @@ metadata:
   labels: # Deployment的标签
     app: blog-mysql
 spec:
-  replicas: 1 # 运行的副本/pod数量
+  replicas: 0 # 运行的副本/pod数量
   selector:
     matchLabels:
       app: blog-mysql # 指定 Deployment 应该管理哪些 Pod
